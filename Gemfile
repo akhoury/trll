@@ -9,7 +9,7 @@ gem 'rails', '3.2.2'
 # gem 'mysql2'
 
 group :production do
-  gem 'mysql2'
+  gem 'pg'
 end
 group :development, :test do
   gem 'sqlite3'
