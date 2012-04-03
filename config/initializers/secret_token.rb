@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Trll::Application.config.secret_token = '65b7b73de2588888bfcac2b92e49b533c83c1c1181b4e681ced1c0fd24b80e0bcbca30852e93f231a4ab80dd093a95e15b72df0dbe8244507afb5d1d16ce756c'
+Trll::Application.config.secret_token = 'fc7ff163ccae8999c6d0ad0a3cfdd34aac108d0147f28cea84dc4c4f65e507294cd767c3a5cfa507e1669e9ee3d56ec40eabcbd904259237a715631cbe717405'

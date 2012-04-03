@@ -1,0 +1,11 @@
+<h2>Latest Urls created</h2>
+<ul>
+<% @latest_urls.each do |u| %>
+  <li><code><%= root_url + "us/" + u.id.to_s -%></code> --points-to <code><%= u.url -%></code> 
+    <% if u.fun %>
+      --alternates-to <code><%= u.alt_url -%></code>  
+    <% end %>
+    --hits <span class="number"><%= u.hits.to_s -%></span> --creator-ip <span class="number"><%= u.creator %></span> --created-at <span class="number"> <%= u.created_at.to_s %></span>
+  </li>
+<% end %>
+</ul>

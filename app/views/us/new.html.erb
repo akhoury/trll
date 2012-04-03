@@ -1,0 +1,54 @@
+<noscript>
+    <style type="text/css">
+        #the-whole-thing {display:none;}
+    </style>
+    <div class="noscriptmsg">
+    <br/><br/>You don't have javascript enabled. GTFO.
+    </div>
+</noscript>
+
+<script>
+$(document).ready(function(){
+  
+  toggleFunOptions();
+  $('#fun-yo').on('change click', function(){
+    toggleFunOptions();
+    }); 
+  });
+  function toggleFunOptions(){
+    if ($('#fun-yo').is(':checked')){
+      $('#fun-options').show('fast');
+    }
+    else {
+      $('#fun-options').hide('slow');
+    }
+  }   
+</script>
+<div id="the-whole-thing">
+<h2>Enter a new URL</h2>
+<%= form_for @short_url do |f| %>
+  <p>
+    <%= f.label :url, "Your URL:" %>
+    <%= f.text_field :url %>    
+  </p>
+  <p>
+  <%= f.label :fun, "trll?" %>
+  <%= f.check_box :fun, :id => "fun-yo" %>
+  </p>
+  <div id="fun-options">
+  <small><p>
+  Enter an alternate URL, and I will switch between the URLs everytime someone hits the short one. Useful in forums, fb posts or tweets - I recommend something completely irrelevant, maybe [nsfw], whatever.</p>
+  </small> 
+  <%= f.label :alt_url, "Alternate URL:" %>
+  <%= f.text_field :alt_url %> 
+  </div>
+  <% if @short_url.errors[:url].any? %>
+    <p class='error-messages'>
+      The given url <%= @short_url.errors[:url].to_sentence %>.
+    </p>
+  <% end %>
+  <p class='buttons'>
+    <%= f.submit "Shorten my URL" %>
+  </p>
+<% end %>
+</div>

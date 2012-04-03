@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Trll - just another url shortner?</title>
+  <title>Trll - url shortner?</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<% if flash[:short_id].present? %>
+<div id="header">
+  <div id="logo">
+    <%= link_to root_url do %>
+      <%= image_tag "trll_logo.png", :alt => "trll" %>
+    <% end %>
+  </div>
+  <div id="nav">
+    <a id="latest-link" href="/us">latest urls</a>
+    <a id="email-link" href="mailto:problem@trll.co" target="_blank">problem?</a>
+  </div>
+</div>
+<% if flash[:notice].present? %>
+  <p class='notice'> <%= flash[:notice] %> </p>
+<% elsif flash[:short_id].present? %>
   <p class='short-link'>
     The shortened url is available <%= link_to 'here',
-url_url(flash[:short_id]) %>.
-    (Right click and copy link to share it). or here: <code><%= url_url(flash[:short_id]) %> <code>
+u_url(flash[:short_id]) %>.
+    (Right click and copy link to share it). or here: <code><%= u_url(flash[:short_id]) %> </code>
   </p>
 <% end %>
 
 <%= yield %>
-
+<div id="footer">
+  <br/><br/><br/><br/>
+<small>For entertainment use only. TRLL is not responsible for any content linked in the generated URLs. Use at your own risk.<br/>
+Copyright © <%= DateTime.now.year %> by bentael -- <a id="donate-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=bentael%40gmail%2ecom&lc=US&item_name=trll&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHostedGuest">buy me a beer, thx</a>
+</small>
+</div>
 </body>
 </html>

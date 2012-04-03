@@ -11,3 +11,20 @@
  *= require_self
  *= require_tree .
 */
+body {
+  background-color: #808080;
+  text-align: center;
+}
+
+code, .number {
+  color: blue;
+}
+#header a#latest-link {
+  margin-right: 30px;
+}
+#header a#email-link {
+  margin-left: 30px;
+}
+.notice {
+  color: #800000;
+}

@@ -1,8 +1,9 @@
 Trll::Application.routes.draw do
-  # get "urls/new"
-  resources :urls, :only =>  [:show, :new, :create ]
+  # get "us/new"
   
-  root :to => redirect("/urls/new")
+  resources :us, :only => [:new, :show, :create, :index ]
+  
+  root :to => redirect("/us/new")
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
