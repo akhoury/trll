@@ -1,7 +1,8 @@
 <h2>Latest Urls created</h2>
 <ul>
+<% require 'rufus-mnemo' %>
 <% @latest_urls.each do |u| %>
-  <li><code><%= root_url + "us/" + u.id.to_s -%></code> --points-to <code><%= u.url -%></code> 
+  <li><code><%= root_url + "us/" + Rufus::Mnemo.to_s(u.id) -%></code> --points-to <code><%= u.url -%></code> 
     <% if u.fun %>
       --alternates-to <code><%= u.alt_url -%></code>  
     <% end %>

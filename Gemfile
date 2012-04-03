@@ -50,4 +50,5 @@ gem 'pry'
 
 gem 'google-analytics-rails'
 
+gem 'rufus-mnemo'
 

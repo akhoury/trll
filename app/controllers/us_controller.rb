@@ -1,4 +1,6 @@
 class UsController < ApplicationController
+  require 'rufus/mnemo'
+  
   def new
     @short_url = U.new
   end
@@ -15,7 +17,7 @@ class UsController < ApplicationController
       flash[:notice] = "URL(s) are invalid (must begin with 'http://' or 'https://'), you know?"
       redirect_to new_u_url
     elsif @short_url.save
-      flash[:short_id] = @short_url.id
+      flash[:short_id] = Rufus::Mnemo::from_integer(@short_url.id)
       redirect_to new_u_url
     else
       render :action => "new"
@@ -23,7 +25,7 @@ class UsController < ApplicationController
   end
   
   def show
-    @short_url = U.find(params[:id])
+    @short_url = U.find(Rufus::Mnemo::from_s(params[:id]))
     @short_url.hits = @short_url.hits + 1
     @short_url.save!
     return redirect_to @short_url.url unless @short_url.fun
