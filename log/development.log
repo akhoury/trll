@@ -1,0 +1,2453 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-04-02 20:25:03 -0400
+Served asset /rails.png - 200 OK (23ms)
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (184.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (167.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUrls (20120403002548)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "urls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255) NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120403002548')
+  [1m[36m (183.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("urls")
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-04-02 20:42:19 -0400
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-04-02 20:42:42 -0400
+Served asset /rails.png - 304 Not Modified (69ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-04-02 20:43:00 -0400
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:43:00 -0400
+
+ArgumentError (comparison of Symbol with true failed):
+  app/models/url.rb:2:in `>'
+  app/models/url.rb:2:in `<class:Url>'
+  app/models/url.rb:1:in `<top (required)>'
+  app/controllers/urls_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (21.6ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (28.2ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (99.5ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:43:41 -0400
+
+ArgumentError (Unknown validator: 'PresenseValidator'):
+  app/models/url.rb:2:in `<class:Url>'
+  app/models/url.rb:1:in `<top (required)>'
+  app/controllers/urls_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (116.4ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (155.5ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:44:48 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (64.9ms)
+Completed 500 Internal Server Error in 102ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <h1>Add a new URL</h1>
+    2: <%= form_for @shortened_url do |form| %>
+    3:   <p>
+    4:     <%= form.label :url, "Your URL:" %>
+    5:     <%= form.text_field :url %>
+  app/views/urls/new.html.erb:2:in `_app_views_urls_new_html_erb___765519737_78274520'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (84.9ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (120.9ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:45:41 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.9ms)
+Compiled urls.css  (156ms)  (pid 29898)
+Compiled application.css  (229ms)  (pid 29898)
+Compiled jquery.js  (9ms)  (pid 29898)
+Compiled jquery_ujs.js  (1ms)  (pid 29898)
+Compiled urls.js  (2190ms)  (pid 29898)
+Compiled application.js  (2622ms)  (pid 29898)
+Completed 200 OK in 3287ms (Views: 3285.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-02 20:45:45 -0400
+Served asset /application.css - 200 OK (50ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-02 20:45:45 -0400
+Served asset /jquery_ujs.js - 200 OK (12ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-02 20:45:45 -0400
+Served asset /urls.css - 200 OK (8ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-02 20:45:45 -0400
+Served asset /urls.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-02 20:45:45 -0400
+Served asset /application.js - 200 OK (30ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-02 20:45:45 -0400
+Served asset /jquery.js - 200 OK (15ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-02 20:46:23 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g/t7gHb6uKcZs2X/z0cU3AxT2Iet/K7Mf95zbD7TOJc=", "url"=>{"url"=>"http://localhost:3000/urls/new"}, "commit"=>"Shorten my URL"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (308.2ms)[0m  INSERT INTO "urls" ("created_at", "updated_at", "url") VALUES (?, ?, ?)  [["created_at", Tue, 03 Apr 2012 00:46:23 UTC +00:00], ["updated_at", Tue, 03 Apr 2012 00:46:23 UTC +00:00], ["url", "http://localhost:3000/urls/new"]]
+  [1m[36m (260.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 589ms (ActiveRecord: 569.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:46:23 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-04-02 20:46:43 -0400
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:46:43 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2012-04-02 20:47:00 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUrl Load (0.8ms)[0m  SELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1  [["id", "1"]]
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:47:00 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/show" for 127.0.0.1 at 2012-04-02 20:47:10 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUrl Load (0.3ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1[0m  [["id", "show"]]
+Completed 500 Internal Server Error in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Url with id=show):
+  app/controllers/urls_controller.rb:17:in `show'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.3ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (62.0ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2012-04-02 20:47:14 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUrl Load (0.4ms)[0m  SELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1  [["id", "1"]]
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:47:14 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 35ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/2" for 127.0.0.1 at 2012-04-02 20:47:18 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.3ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Completed 500 Internal Server Error in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Url with id=2):
+  app/controllers/urls_controller.rb:17:in `show'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (27.5ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (65.9ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-02 20:48:57 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g/t7gHb6uKcZs2X/z0cU3AxT2Iet/K7Mf95zbD7TOJc=", "url"=>{"url"=>"http://localhost:3000/urls/new"}, "commit"=>"Shorten my URL"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "urls" ("created_at", "updated_at", "url") VALUES (?, ?, ?)[0m  [["created_at", Tue, 03 Apr 2012 00:48:57 UTC +00:00], ["updated_at", Tue, 03 Apr 2012 00:48:57 UTC +00:00], ["url", "http://localhost:3000/urls/new"]]
+  [1m[35m (283.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 295ms (ActiveRecord: 285.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:48:57 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-02 20:48:57 -0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-02 20:48:57 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-02 20:48:57 -0400
+Served asset /urls.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-02 20:48:57 -0400
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/urls/2" for 127.0.0.1 at 2012-04-02 20:49:10 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.4ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:49:10 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 147ms (Views: 145.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-02 20:49:11 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-02 20:49:11 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:11 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:11 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:11 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:11 -0400
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-02 20:49:23 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g/t7gHb6uKcZs2X/z0cU3AxT2Iet/K7Mf95zbD7TOJc=", "url"=>{"url"=>"www.google.com"}, "commit"=>"Shorten my URL"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "urls" ("created_at", "updated_at", "url") VALUES (?, ?, ?)[0m  [["created_at", Tue, 03 Apr 2012 00:49:23 UTC +00:00], ["updated_at", Tue, 03 Apr 2012 00:49:23 UTC +00:00], ["url", "www.google.com"]]
+  [1m[35m (417.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 443ms (ActiveRecord: 418.7ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:49:24 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-02 20:49:24 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:24 -0400
+Served asset /urls.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-02 20:49:24 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:24 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:24 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:24 -0400
+Served asset /application.js - 304 Not Modified (18ms)
+
+
+Started GET "/urls/3" for 127.0.0.1 at 2012-04-02 20:49:31 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUrl Load (0.4ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Redirected to http://localhost:3000www.google.com
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/" for 127.0.0.1 at 2012-04-02 20:49:43 -0400
+
+ActionController::RoutingError (No route matches [GET] "/urls"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/urls/3" for 127.0.0.1 at 2012-04-02 20:49:46 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUrl Load (0.4ms)[0m  SELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1  [["id", "3"]]
+Redirected to http://localhost:3000www.google.com
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/3" for 127.0.0.1 at 2012-04-02 20:49:46 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUrl Load (0.4ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Redirected to http://localhost:3000www.google.com
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/2" for 127.0.0.1 at 2012-04-02 20:49:48 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUrl Load (0.3ms)[0m  SELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1  [["id", "2"]]
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:49:48 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 42ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-02 20:49:48 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-02 20:49:48 -0400
+Served asset /urls.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:48 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:49 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-02 20:49:49 -0400
+Served asset /urls.js - 304 Not Modified (2ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-02 20:50:03 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g/t7gHb6uKcZs2X/z0cU3AxT2Iet/K7Mf95zbD7TOJc=", "url"=>{"url"=>"httP://www.google.com"}, "commit"=>"Shorten my URL"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "urls" ("created_at", "updated_at", "url") VALUES (?, ?, ?)  [["created_at", Tue, 03 Apr 2012 00:50:03 UTC +00:00], ["updated_at", Tue, 03 Apr 2012 00:50:03 UTC +00:00], ["url", "httP://www.google.com"]]
+  [1m[36m (319.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 333ms (ActiveRecord: 321.1ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:50:04 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-02 20:50:04 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-02 20:50:04 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-02 20:50:04 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-02 20:50:04 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-02 20:50:04 -0400
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-02 20:50:04 -0400
+Served asset /urls.css - 304 Not Modified (1ms)
+
+
+Started GET "/urls/4" for 127.0.0.1 at 2012-04-02 20:50:10 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUrl Load (0.4ms)[0m  SELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1  [["id", "4"]]
+Redirected to httP://www.google.com
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-02 20:50:32 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g/t7gHb6uKcZs2X/z0cU3AxT2Iet/K7Mf95zbD7TOJc=", "url"=>{"url"=>"http://tayyar.org"}, "commit"=>"Shorten my URL"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "urls" ("created_at", "updated_at", "url") VALUES (?, ?, ?)  [["created_at", Tue, 03 Apr 2012 00:50:32 UTC +00:00], ["updated_at", Tue, 03 Apr 2012 00:50:32 UTC +00:00], ["url", "http://tayyar.org"]]
+  [1m[36m (475.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 485ms (ActiveRecord: 477.1ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-02 20:50:32 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-02 20:50:32 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-02 20:50:32 -0400
+Served asset /urls.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-02 20:50:32 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-02 20:50:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-02 20:50:32 -0400
+Served asset /urls.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-02 20:50:33 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/urls/5" for 127.0.0.1 at 2012-04-02 20:50:35 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUrl Load (0.4ms)[0m  SELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1  [["id", "5"]]
+Redirected to http://tayyar.org
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUrls (20120403002548)
+Migrating to AddFieldsToUrl (20120403142508)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUrls (20120403002548)
+Migrating to AddFieldsToUrl (20120403142508)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUrls (20120403002548)
+Migrating to AddFieldsToUrl (20120403142508)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUrls (20120403002548)
+Migrating to AddFieldsToUrl (20120403142508)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  ALTER TABLE "urls" ADD "fun" boolean DEFAULT 'f'
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "urls" ADD "alt_url" varchar(255)[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "urls" ADD "turn" boolean DEFAULT 'f'
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120403142508')[0m
+  [1m[35m (249.4ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("urls")[0m
+
+
+Started GET "/campaigns" for 127.0.0.1 at 2012-04-03 10:40:15 -0400
+
+ActionController::RoutingError (No route matches [GET] "/campaigns"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-04-03 10:40:18 -0400
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 10:40:19 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 444ms (Views: 412.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 10:40:19 -0400
+Served asset /application.css - 304 Not Modified (39ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 10:40:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 10:40:20 -0400
+Served asset /jquery.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 10:40:20 -0400
+Served asset /application.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 10:40:20 -0400
+Served asset /urls.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 10:40:20 -0400
+Served asset /urls.js - 304 Not Modified (9ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 10:40:48 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 10:40:48 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 10:40:48 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 10:40:48 -0400
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 10:40:48 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 10:40:48 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 10:40:48 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 10:41:19 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 10:41:20 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 10:41:20 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 10:41:20 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 10:41:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 10:41:20 -0400
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 10:41:20 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 10:46:34 -0400
+Processing by UrlsController#new as HTML
+ERROR: compiling _app_views_urls_new_html_erb__982409631_76967940 RAISED /home/aziz/code/trll/app/views/urls/new.html.erb:9: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...r.append= ( f.check_box, :fun );@output_buffer.safe_concat('
+...                               ^
+/home/aziz/code/trll/app/views/urls/new.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/home/aziz/code/trll/app/views/urls/new.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+/home/aziz/code/trll/app/views/urls/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_urls_new_html_erb__982409631_76967940(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "urls/new";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Add a new URL</h1>
+');@output_buffer.append=  form_for @short_url do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <p>
+    ');@output_buffer.append= ( f.label :url, "Your URL:" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( f.text_field :url );@output_buffer.safe_concat('    
+');@output_buffer.safe_concat('  </p>
+  <p>
+  ');@output_buffer.append= ( f.label :fun, "troll? yea wth." );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.check_box, :fun );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+  <div id="fun-options">
+  </div>
+');   if @short_url.errors[:url].any? 
+@output_buffer.safe_concat('    <p class=\'error-messages\'>
+      The given url ');@output_buffer.append= ( @short_url.errors[:url].to_sentence );@output_buffer.safe_concat('.
+    </p>
+');   end 
+@output_buffer.safe_concat('  <p class=\'buttons\'>
+    ');@output_buffer.append= ( f.submit "Shorten my URL" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </p>
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `module_eval'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `compile'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/template.rb:233:in `compile!'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/template.rb:142:in `block in render'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/notifications.rb:125:in `instrument'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/template.rb:141:in `render'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:42:in `block (2 levels) in render_template'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `instrument'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:41:in `block in render_template'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:49:in `render_with_layout'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:40:in `render_template'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:13:in `render'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:109:in `_render_template'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:88:in `render'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:167:in `process_action'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:414:in `_run__172386883__process_action__254007495__callbacks'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `instrument'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:121:in `process'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:45:in `process'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal.rb:203:in `dispatch'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_controller/metal.rb:246:in `block in action'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:30:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/journey-1.0.3/lib/journey/router.rb:68:in `block in call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/journey-1.0.3/lib/journey/router.rb:56:in `each'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/journey-1.0.3/lib/journey/router.rb:56:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:594:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activerecord-3.2.2/lib/active_record/query_cache.rb:64:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `_run__671289010__call__513205036__callbacks'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/railties-3.2.2/lib/rails/rack/logger.rb:26:in `call_app'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/railties-3.2.2/lib/rails/rack/logger.rb:16:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/activesupport-3.2.2/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/static.rb:61:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/railties-3.2.2/lib/rails/engine.rb:479:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/railties-3.2.2/lib/rails/application.rb:220:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/railties-3.2.2/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered urls/new.html.erb within layouts/application (50.5ms)
+Completed 500 Internal Server Error in 59ms
+
+ActionView::Template::Error (/home/aziz/code/trll/app/views/urls/new.html.erb:9: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...r.append= ( f.check_box, :fun );@output_buffer.safe_concat('
+...                               ^
+/home/aziz/code/trll/app/views/urls/new.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/home/aziz/code/trll/app/views/urls/new.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+/home/aziz/code/trll/app/views/urls/new.html.erb:25: syntax error, unexpected keyword_end, expecting ')'):
+    6:   </p>
+    7:   <p>
+    8:   <%= f.label :fun, "troll? yea wth." %>
+    9:   <%= f.check_box, :fun %>
+    10:   </p>
+    11:   <div id="fun-options">
+    12:   </div>
+  actionpack (3.2.2) lib/action_view/template.rb:285:in `module_eval'
+  actionpack (3.2.2) lib/action_view/template.rb:285:in `compile'
+  actionpack (3.2.2) lib/action_view/template.rb:233:in `compile!'
+  actionpack (3.2.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (3.2.2) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.2) lib/action_view/template.rb:141:in `render'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:42:in `block (2 levels) in render_template'
+  actionpack (3.2.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:41:in `block in render_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:49:in `render_with_layout'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:40:in `render_template'
+  actionpack (3.2.2) lib/action_view/renderer/template_renderer.rb:13:in `render'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.2) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:109:in `_render_template'
+  actionpack (3.2.2) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.2) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.2) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:414:in `_run__172386883__process_action__254007495__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.2) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.2) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.2) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.2) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.2) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.2) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.2) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:30:in `call'
+  journey (1.0.3) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.3) lib/journey/router.rb:56:in `each'
+  journey (1.0.3) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.2) lib/action_dispatch/routing/route_set.rb:594:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.2) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `_run__671289010__call__513205036__callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (19.5ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (62.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 10:47:26 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 144ms (Views: 142.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 10:47:26 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 10:47:26 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 10:47:26 -0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 10:47:26 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 10:47:26 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 10:47:26 -0400
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 10:59:27 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 10:59:27 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 10:59:27 -0400
+Served asset /urls.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 10:59:27 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 10:59:27 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 10:59:27 -0400
+Served asset /urls.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 10:59:27 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:07:20 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:07:20 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:07:20 -0400
+Served asset /urls.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:07:20 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:07:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:07:21 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:07:21 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/images/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:07:21 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/head_exploding.gif"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:07:59 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:08:00 -0400
+Served asset /application.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:08:00 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:08:00 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:08:00 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:08:00 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:08:00 -0400
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/images/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:08:00 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/head_exploding.gif"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:08:19 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (109.1ms)
+Completed 200 OK in 137ms (Views: 136.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:08:20 -0400
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:08:20 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:08:20 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:08:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:08:20 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:08:20 -0400
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/images/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:08:20 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/head_exploding.gif"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/images/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:08:49 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/head_exploding.gif"):
+  actionpack (3.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.2) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.2) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.2) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.2) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.2.2) lib/rails/engine.rb:479:in `call'
+  railties (3.2.2) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.2) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/aziz/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.4ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:09:07 -0400
+Served asset /head_exploding.gif - 200 OK (40ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:09:24 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:09:24 -0400
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:09:24 -0400
+Served asset /urls.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:09:24 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:09:24 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:09:24 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:09:24 -0400
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:09:24 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:09:57 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:09:57 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:09:57 -0400
+Served asset /urls.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:09:57 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:09:57 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:09:57 -0400
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:09:57 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:09:57 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:12:04 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:12:04 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:12:04 -0400
+Served asset /urls.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:12:04 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:12:04 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:12:04 -0400
+Served asset /urls.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:12:04 -0400
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:12:04 -0400
+Served asset /head_exploding.gif - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-04-03 11:18:49 -0400
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:18:49 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:18:49 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:18:49 -0400
+Served asset /urls.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:18:49 -0400
+Served asset /jquery.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:18:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:18:49 -0400
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:18:49 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:18:49 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:19:32 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:19:32 -0400
+Served asset /application.css - 304 Not Modified (38ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:19:32 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:19:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:19:32 -0400
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:19:32 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:19:32 -0400
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:19:33 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:19:49 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:19:49 -0400
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:19:49 -0400
+Served asset /urls.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:19:49 -0400
+Served asset /urls.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:19:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:19:49 -0400
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:19:49 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:19:49 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:20:29 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:20:29 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:20:29 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:20:29 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:20:29 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:20:29 -0400
+Served asset /urls.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:20:29 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:20:29 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:20:56 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:20:56 -0400
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:20:56 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:20:56 -0400
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:20:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:20:56 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:20:56 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:20:56 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:21:15 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:21:15 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:21:15 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:21:15 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:21:15 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:21:15 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:21:15 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:21:16 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:21:28 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:21:28 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:21:28 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:21:28 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:21:28 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:21:28 -0400
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:21:28 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:21:29 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:22:41 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:22:41 -0400
+Served asset /application.css - 304 Not Modified (38ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:22:41 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:22:41 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:22:41 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:22:41 -0400
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:22:41 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:22:41 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:23:14 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (105.5ms)
+Completed 200 OK in 132ms (Views: 131.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:23:14 -0400
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:23:14 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:23:14 -0400
+Served asset /urls.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:23:14 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:23:14 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:23:14 -0400
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:23:14 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:23:32 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:23:32 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:23:32 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:23:32 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:23:32 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:23:32 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:23:32 -0400
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:23:33 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:24:01 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:24:01 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:24:01 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:24:01 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:24:01 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:24:01 -0400
+Served asset /urls.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:24:01 -0400
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:24:01 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:24:07 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:24:07 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:24:07 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:24:08 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:24:08 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:24:08 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:24:08 -0400
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:24:08 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:26:34 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 126ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:26:34 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:26:34 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:26:34 -0400
+Served asset /jquery.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:26:34 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:26:34 -0400
+Served asset /application.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:26:34 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:26:34 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:26:39 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:26:39 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:26:39 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:26:39 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:26:39 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:26:39 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:26:39 -0400
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:26:39 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:28:00 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:00 -0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:00 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:00 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:00 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:01 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:01 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:28:01 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-03 11:28:04 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NolD59tREFVY1tZZcsQEjbqK/iT9cmCwSiX7+9ScVZY=", "url"=>{"url"=>"http://tayyar.org", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (204.1ms)[0m  INSERT INTO "urls" ("alt_url", "created_at", "fun", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?)  [["alt_url", ""], ["created_at", Tue, 03 Apr 2012 15:28:04 UTC +00:00], ["fun", false], ["turn", false], ["updated_at", Tue, 03 Apr 2012 15:28:04 UTC +00:00], ["url", "http://tayyar.org"]]
+  [1m[36m (198.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 420ms (ActiveRecord: 402.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:28:05 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:05 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:05 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:05 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:05 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:05 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:05 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:28:05 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:28:20 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:20 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:20 -0400
+Served asset /urls.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:20 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:20 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:20 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:20 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:28:20 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-03 11:28:23 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NolD59tREFVY1tZZcsQEjbqK/iT9cmCwSiX7+9ScVZY=", "url"=>{"url"=>"http://tayyar.org", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "urls" ("alt_url", "created_at", "fun", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?)[0m  [["alt_url", ""], ["created_at", Tue, 03 Apr 2012 15:28:23 UTC +00:00], ["fun", false], ["turn", false], ["updated_at", Tue, 03 Apr 2012 15:28:23 UTC +00:00], ["url", "http://tayyar.org"]]
+  [1m[35m (259.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 275ms (ActiveRecord: 265.3ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:28:23 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:23 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:23 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:24 -0400
+Served asset /urls.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:24 -0400
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:24 -0400
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:24 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:28:24 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:28:41 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:41 -0400
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:41 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:41 -0400
+Served asset /urls.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:41 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:41 -0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:41 -0400
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:28:42 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-03 11:28:45 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NolD59tREFVY1tZZcsQEjbqK/iT9cmCwSiX7+9ScVZY=", "url"=>{"url"=>"httP://www.google.com", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.0ms)[0m  INSERT INTO "urls" ("alt_url", "created_at", "fun", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?)  [["alt_url", ""], ["created_at", Tue, 03 Apr 2012 15:28:45 UTC +00:00], ["fun", false], ["turn", false], ["updated_at", Tue, 03 Apr 2012 15:28:45 UTC +00:00], ["url", "httP://www.google.com"]]
+  [1m[36m (263.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 280ms (ActiveRecord: 270.9ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:28:45 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (99.9ms)
+Completed 200 OK in 127ms (Views: 125.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:45 -0400
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:45 -0400
+Served asset /urls.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:45 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:45 -0400
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:45 -0400
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:45 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:28:46 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:28:59 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:59 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:59 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:28:59 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:59 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:59 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:28:59 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:28:59 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-03 11:29:02 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NolD59tREFVY1tZZcsQEjbqK/iT9cmCwSiX7+9ScVZY=", "url"=>{"url"=>"httP://www.google.com", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "urls" ("alt_url", "created_at", "fun", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?)[0m  [["alt_url", ""], ["created_at", Tue, 03 Apr 2012 15:29:02 UTC +00:00], ["fun", false], ["turn", false], ["updated_at", Tue, 03 Apr 2012 15:29:02 UTC +00:00], ["url", "httP://www.google.com"]]
+  [1m[35m (199.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 210ms (ActiveRecord: 201.1ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:29:02 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:29:02 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:29:02 -0400
+Served asset /urls.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:02 -0400
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:02 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:02 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:02 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:29:02 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:29:18 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:29:18 -0400
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:18 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:29:18 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:18 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:18 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:18 -0400
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:29:18 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-03 11:29:22 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NolD59tREFVY1tZZcsQEjbqK/iT9cmCwSiX7+9ScVZY=", "url"=>{"url"=>"httP://www.google.com", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "urls" ("alt_url", "created_at", "fun", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?)  [["alt_url", ""], ["created_at", Tue, 03 Apr 2012 15:29:22 UTC +00:00], ["fun", false], ["turn", false], ["updated_at", Tue, 03 Apr 2012 15:29:22 UTC +00:00], ["url", "httP://www.google.com"]]
+  [1m[36m (258.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 269ms (ActiveRecord: 260.1ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:29:22 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 126ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:29:22 -0400
+Served asset /application.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:29:22 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:22 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:22 -0400
+Served asset /urls.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:22 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:22 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:29:23 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:29:40 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 68ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:29:40 -0400
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:29:40 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:40 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:40 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:40 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:40 -0400
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:29:40 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-03 11:29:43 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NolD59tREFVY1tZZcsQEjbqK/iT9cmCwSiX7+9ScVZY=", "url"=>{"url"=>"http://tayyar.org", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "urls" ("alt_url", "created_at", "fun", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?)[0m  [["alt_url", ""], ["created_at", Tue, 03 Apr 2012 15:29:43 UTC +00:00], ["fun", false], ["turn", false], ["updated_at", Tue, 03 Apr 2012 15:29:43 UTC +00:00], ["url", "http://tayyar.org"]]
+  [1m[35m (287.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 298ms (ActiveRecord: 289.2ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:29:44 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:29:44 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:29:44 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:44 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:44 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:44 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:29:44 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:29:44 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:33:25 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:33:25 -0400
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:33:25 -0400
+Served asset /urls.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:25 -0400
+Served asset /jquery.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:25 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:25 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:25 -0400
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:33:25 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:33:34 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:33:34 -0400
+Served asset /application.css - 304 Not Modified (110ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:35 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:33:35 -0400
+Served asset /urls.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:35 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:35 -0400
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:35 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:33:35 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:33:51 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:33:51 -0400
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:33:51 -0400
+Served asset /urls.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:51 -0400
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:51 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:51 -0400
+Served asset /urls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:33:51 -0400
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:33:51 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2012-04-03 11:38:28 -0400
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NolD59tREFVY1tZZcsQEjbqK/iT9cmCwSiX7+9ScVZY=", "url"=>{"url"=>"http://tayyar.org", "fun"=>"1", "alt_url"=>"http://google.com"}, "commit"=>"Shorten my URL"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "urls" ("alt_url", "created_at", "fun", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?)  [["alt_url", "http://google.com"], ["created_at", Tue, 03 Apr 2012 15:38:28 UTC +00:00], ["fun", true], ["turn", false], ["updated_at", Tue, 03 Apr 2012 15:38:28 UTC +00:00], ["url", "http://tayyar.org"]]
+  [1m[36m (261.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/urls/new
+Completed 302 Found in 309ms (ActiveRecord: 263.3ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2012-04-03 11:38:29 -0400
+Processing by UrlsController#new as HTML
+  Rendered urls/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-03 11:38:29 -0400
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/urls.css?body=1" for 127.0.0.1 at 2012-04-03 11:38:29 -0400
+Served asset /urls.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-03 11:38:29 -0400
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/urls.js?body=1" for 127.0.0.1 at 2012-04-03 11:38:29 -0400
+Served asset /urls.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-03 11:38:29 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-03 11:38:29 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/head_exploding.gif" for 127.0.0.1 at 2012-04-03 11:38:29 -0400
+Served asset /head_exploding.gif - 304 Not Modified (0ms)
+
+
+Started GET "/urls/12" for 127.0.0.1 at 2012-04-03 11:38:38 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUrl Load (1.1ms)[0m  SELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1  [["id", "12"]]
+Redirected to http://google.com
+Completed 302 Found in 13ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/urls/12" for 127.0.0.1 at 2012-04-03 11:38:42 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUrl Load (0.4ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1[0m  [["id", "12"]]
+Redirected to http://google.com
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/12" for 127.0.0.1 at 2012-04-03 11:39:36 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUrl Load (0.9ms)[0m  SELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1  [["id", "12"]]
+Redirected to http://google.com
+Completed 302 Found in 131ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/urls/12" for 127.0.0.1 at 2012-04-03 11:39:51 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUrl Load (0.5ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1[0m  [["id", "12"]]
+Redirected to http://google.com
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/urls/12" for 127.0.0.1 at 2012-04-03 11:39:57 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUrl Load (0.3ms)[0m  SELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1  [["id", "12"]]
+Redirected to http://google.com
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/12" for 127.0.0.1 at 2012-04-03 11:40:01 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUrl Load (0.9ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1[0m  [["id", "12"]]
+Redirected to http://google.com
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/urls/12" for 127.0.0.1 at 2012-04-03 11:42:02 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUrl Load (0.9ms)[0m  SELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1  [["id", "12"]]
+Completed 500 Internal Server Error in 35ms
+
+NoMethodError (undefined method `pry' for #<Binding:0xb5a56558>):
+  app/controllers/urls_controller.rb:24:in `show'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (13.9ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.1ms)
+
+
+Started GET "/urls/12" for 127.0.0.1 at 2012-04-03 11:44:35 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUrl Load (1.0ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1[0m  [["id", "12"]]
+Redirected to http://google.com
+Completed 302 Found in 13605ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/urls/12" for 127.0.0.1 at 2012-04-03 11:45:09 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUrl Load (0.4ms)[0m  SELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1  [["id", "12"]]
+Redirected to http://google.com
+Completed 302 Found in 31090ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/12" for 127.0.0.1 at 2012-04-03 11:45:51 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUrl Load (0.9ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mUPDATE "urls" SET "turn" = 't', "updated_at" = '2012-04-03 15:45:51.217120' WHERE "urls"."id" = 12[0m
+  [1m[35m (344.9ms)[0m  commit transaction
+Redirected to http://google.com
+Completed 302 Found in 427ms (ActiveRecord: 347.2ms)
+
+
+Started GET "/urls/12" for 127.0.0.1 at 2012-04-03 11:45:55 -0400
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUrl Load (0.7ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mUPDATE "urls" SET "turn" = 'f', "updated_at" = '2012-04-03 15:45:55.200615' WHERE "urls"."id" = 12[0m
+  [1m[35m (375.0ms)[0m  commit transaction
+Redirected to http://tayyar.org
+Completed 302 Found in 386ms (ActiveRecord: 377.0ms)

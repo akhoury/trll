@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trll - just another url shortner?</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if flash[:short_id].present? %>
+  <p class='short-link'>
+    The shortened url is available <%= link_to 'here',
+url_url(flash[:short_id]) %>.
+    (Right click and copy link to share it). or here: <code><%= url_url(flash[:short_id]) %> <code>
+  </p>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
