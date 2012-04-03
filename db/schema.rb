@@ -11,15 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120403184424) do
+ActiveRecord::Schema.define(:version => 20120403220232) do
 
   create_table "us", :force => true do |t|
-    t.string   "url",                           :null => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-    t.boolean  "fun",        :default => false
-    t.string   "alt_url"
-    t.boolean  "turn",       :default => false
+    t.text     "url",        :limit => 255,                    :null => false
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
+    t.boolean  "fun",                       :default => false
+    t.text     "alt_url",    :limit => 255
+    t.boolean  "turn",                      :default => false
     t.integer  "hits"
     t.string   "creator"
   end
