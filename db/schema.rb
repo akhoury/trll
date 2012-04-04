@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120403220232) do
+ActiveRecord::Schema.define(:version => 20120404172231) do
+
+  create_table "urls", :force => true do |t|
+    t.string   "url",                           :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.boolean  "fun",        :default => false
+    t.string   "alt_url"
+    t.boolean  "turn",       :default => false
+  end
 
   create_table "us", :force => true do |t|
     t.text     "url",        :limit => 255,                    :null => false
@@ -22,6 +31,9 @@ ActiveRecord::Schema.define(:version => 20120403220232) do
     t.boolean  "turn",                      :default => false
     t.integer  "hits"
     t.string   "creator"
+    t.string   "token"
   end
+
+  add_index "us", ["token"], :name => "index_us_on_token", :unique => true
 
 end
