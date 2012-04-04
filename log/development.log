@@ -13518,3 +13518,40 @@ Served asset /application.js - 304 Not Modified (5ms)
 
 Started GET "/assets/trll_logo.png" for 127.0.0.1 at 2012-04-04 00:47:05 -0400
 Served asset /trll_logo.png - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-04-04 00:58:04 -0400
+
+
+Started GET "/us/new" for 127.0.0.1 at 2012-04-04 00:58:04 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 00:58:04 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/us.css?body=1" for 127.0.0.1 at 2012-04-04 00:58:04 -0400
+Served asset /us.css - 304 Not Modified (133ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 00:58:04 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 00:58:04 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/us.js?body=1" for 127.0.0.1 at 2012-04-04 00:58:04 -0400
+Served asset /us.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 00:58:04 -0400
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/trll_logo.png" for 127.0.0.1 at 2012-04-04 00:58:05 -0400
+Served asset /trll_logo.png - 304 Not Modified (1ms)
