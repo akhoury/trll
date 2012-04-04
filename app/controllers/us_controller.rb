@@ -17,8 +17,10 @@ class UsController < ApplicationController
       redirect_to new_u_url
     elsif @short_url.save
       flash[:short_id] = Rufus::Mnemo::from_integer(@short_url.id)
+      
+      @short_url.token = Rufus::Mnemo::from_integer(@short_url.id)
+	@short_url.save!  
       redirect_to new_u_url
-      @short_url.update_attribute(:token, Rufus::Mnemo::from_integer(@short_url.id))  
     else
       render :action => "new"
     end
