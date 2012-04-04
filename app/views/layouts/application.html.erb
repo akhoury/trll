@@ -9,13 +9,34 @@
   <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script><g:plusone size="medium" annotation="inline" width="120"></g:plusone>
+  <div class="fb-like" data-href="http://trll.co" 
+        data-send="false" data-layout="button_count" 
+            data-width="120" data-show-faces="false" data-font="verdana" style="margin-left:600px; align:center">
+  </div>
 <div id="header">
   <div id="logo">
     <%= link_to root_url do %>
       <%= image_tag "trll_logo.png", :alt => "trll" %>
     <% end %>
   </div>
-  <div><small>yet another url shortner</small><div>
+  <div><small> yet another url shortner </small></div>
+  
   <div id="nav">
     <a id="latest-link" href="/us">latest urls</a>
     <a id="email-link" href="mailto:bentael@gmail.com" target="_blank">problem?</a>
@@ -27,7 +48,7 @@
   <p class='short-link'>
     The shortened url is available <%= link_to 'here',
 u_url(flash[:short_id]) %>.
-    (Right click and copy link to share it). or here: <code><%= u_url(flash[:short_id]) %> </code>
+    (Right click and copy link to share it). or here: <pre><%= u_url(flash[:short_id]) %></pre>
   </p>
 <% end %>
 
