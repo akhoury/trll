@@ -16401,3 +16401,21 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/trll_logo.png" for 127.0.0.1 at 2012-04-04 14:05:49 -0400
 Served asset /trll_logo.png - 304 Not Modified (0ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUs (20120403162716)
+Migrating to AddInitialFieldsToU (20120403163324)
+Migrating to AddHitsAndCreatorToU (20120403184424)
+Migrating to ChangingUrlsToText (20120403220232)
+Migrating to AddTokenToU (20120404171535)
+Migrating to AddIndexToToken (20120404172231)
+Migrating to MergingOldRecords (20120404204825)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mU Load (1.6ms)[0m  SELECT "us".* FROM "us" 
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120404204825')[0m
+  [1m[35m (203.8ms)[0m  commit transaction
+  [1m[36m (1.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("urls")[0m
+  [1m[35m (0.2ms)[0m  PRAGMA index_list("us")
+  [1m[36m (0.3ms)[0m  [1mPRAGMA index_info('index_us_on_token')[0m

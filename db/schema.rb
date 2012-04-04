@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120404172231) do
+ActiveRecord::Schema.define(:version => 20120404204825) do
 
   create_table "urls", :force => true do |t|
     t.string   "url",                           :null => false
