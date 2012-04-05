@@ -16419,3 +16419,408 @@ Migrating to MergingOldRecords (20120404204825)
   [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("urls")[0m
   [1m[35m (0.2ms)[0m  PRAGMA index_list("us")
   [1m[36m (0.3ms)[0m  [1mPRAGMA index_info('index_us_on_token')[0m
+
+
+Started GET "/" for 192.168.1.6 at 2012-04-04 20:12:47 -0400
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:12:48 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (22.5ms)
+Compiled application.js  (26ms)  (pid 14711)
+Completed 200 OK in 243ms (Views: 201.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.6 at 2012-04-04 20:12:49 -0400
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/us.css?body=1" for 192.168.1.6 at 2012-04-04 20:12:49 -0400
+Served asset /us.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.6 at 2012-04-04 20:12:49 -0400
+Served asset /jquery.js - 200 OK (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.1.6 at 2012-04-04 20:12:49 -0400
+Served asset /jquery_ujs.js - 200 OK (7ms)
+
+
+Started GET "/assets/us.js?body=1" for 192.168.1.6 at 2012-04-04 20:12:49 -0400
+Served asset /us.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 192.168.1.6 at 2012-04-04 20:12:49 -0400
+Served asset /application.js - 200 OK (22ms)
+
+
+Started GET "/assets/trll_logo.png" for 192.168.1.6 at 2012-04-04 20:12:50 -0400
+Served asset /trll_logo.png - 200 OK (5ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:12:50 -0400
+Served asset /favicon.ico - 200 OK (4ms)
+
+
+Started POST "/us" for 192.168.1.6 at 2012-04-04 20:13:01 -0400
+Processing by UsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ker2OJ0aFjuCsXbW9P3kwLzUzDVdssbCgaHmylYWM1Q=", "u"=>{"url"=>"", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+Redirected to http://192.168.1.110:3000/us/new
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:13:01 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:13:01 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started POST "/us" for 192.168.1.6 at 2012-04-04 20:13:05 -0400
+Processing by UsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ker2OJ0aFjuCsXbW9P3kwLzUzDVdssbCgaHmylYWM1Q=", "u"=>{"url"=>"www.google.com", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `prepent_http' for #<U:0xb3031fc>):
+  app/models/u.rb:14:in `url_valid?'
+  app/controllers/us_controller.rb:15:in `create'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.8ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.5ms)
+
+
+Started GET "/" for 192.168.1.6 at 2012-04-04 20:13:34 -0400
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:13:34 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 75ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:13:35 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started POST "/us" for 192.168.1.6 at 2012-04-04 20:13:38 -0400
+Processing by UsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ker2OJ0aFjuCsXbW9P3kwLzUzDVdssbCgaHmylYWM1Q=", "u"=>{"url"=>"www.google.com", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+Completed 500 Internal Server Error in 8ms
+
+NameError (undefined local variable or method `self_url' for #<U:0xa030520>):
+  app/models/u.rb:16:in `url_valid?'
+  app/controllers/us_controller.rb:15:in `create'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (14.9ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.6ms)
+
+
+Started POST "/us" for 192.168.1.6 at 2012-04-04 20:14:14 -0400
+Processing by UsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ker2OJ0aFjuCsXbW9P3kwLzUzDVdssbCgaHmylYWM1Q=", "u"=>{"url"=>"www.google.com", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `creator`
+  [1m[35mSQL (18.6ms)[0m  INSERT INTO "us" ("alt_url", "created_at", "creator", "fun", "hits", "token", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["alt_url", ""], ["created_at", Thu, 05 Apr 2012 00:14:15 UTC +00:00], ["creator", "192.168.1.6"], ["fun", false], ["hits", 0], ["token", nil], ["turn", false], ["updated_at", Thu, 05 Apr 2012 00:14:15 UTC +00:00], ["url", "http://www.google.com"]]
+  [1m[36m (214.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mUPDATE "us" SET "token" = 'ku', "updated_at" = '2012-04-05 00:14:15.424394' WHERE "us"."id" = 29[0m
+  [1m[35m (203.6ms)[0m  commit transaction
+Redirected to http://192.168.1.110:3000/us/new
+Completed 302 Found in 503ms (ActiveRecord: 438.3ms)
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:14:15 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:14:15 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/us" for 192.168.1.6 at 2012-04-04 20:14:18 -0400
+Processing by UsController#index as HTML
+  [1m[36mU Load (2.0ms)[0m  [1mSELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100[0m
+  Rendered us/index.html.erb within layouts/application (59.5ms)
+Completed 200 OK in 97ms (Views: 83.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 192.168.1.6 at 2012-04-04 20:14:26 -0400
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:14:26 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (88.7ms)
+Completed 200 OK in 113ms (Views: 112.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:14:26 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started POST "/us" for 192.168.1.6 at 2012-04-04 20:14:31 -0400
+Processing by UsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ker2OJ0aFjuCsXbW9P3kwLzUzDVdssbCgaHmylYWM1Q=", "u"=>{"url"=>"ASDASDSADASD", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+  [1m[35m (0.2ms)[0m  begin transaction
+Binary data inserted for `string` type on column `creator`
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "us" ("alt_url", "created_at", "creator", "fun", "hits", "token", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["alt_url", ""], ["created_at", Thu, 05 Apr 2012 00:14:31 UTC +00:00], ["creator", "192.168.1.6"], ["fun", false], ["hits", 0], ["token", nil], ["turn", false], ["updated_at", Thu, 05 Apr 2012 00:14:31 UTC +00:00], ["url", "http://ASDASDSADASD"]]
+  [1m[35m (306.8ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  UPDATE "us" SET "token" = 'ma', "updated_at" = '2012-04-05 00:14:32.174633' WHERE "us"."id" = 30
+  [1m[36m (217.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://192.168.1.110:3000/us/new
+Completed 302 Found in 545ms (ActiveRecord: 526.8ms)
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:14:32 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:14:32 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/us" for 192.168.1.6 at 2012-04-04 20:14:35 -0400
+Processing by UsController#index as HTML
+  [1m[35mU Load (2.0ms)[0m  SELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100
+  Rendered us/index.html.erb within layouts/application (57.9ms)
+Completed 200 OK in 88ms (Views: 79.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 192.168.1.6 at 2012-04-04 20:14:46 -0400
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:14:46 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:14:46 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started POST "/us" for 192.168.1.6 at 2012-04-04 20:14:50 -0400
+Processing by UsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ker2OJ0aFjuCsXbW9P3kwLzUzDVdssbCgaHmylYWM1Q=", "u"=>{"url"=>"https://www.google.com/webhp?sourceid=chrome-instant&ix=sea&ie=UTF-8&ion=1#hl=en&output=search&sclient=psy-ab&q=check%20if%20browser%20has%20javascript%20enabled&oq=&aq=&aqi=&aql=&gs_l=&pbx=1&fp=9b0c83a130f3bca0&ix=sea&ion=1&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.,cf.osb&biw=1920&bih=1095", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `creator`
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "us" ("alt_url", "created_at", "creator", "fun", "hits", "token", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["alt_url", ""], ["created_at", Thu, 05 Apr 2012 00:14:50 UTC +00:00], ["creator", "192.168.1.6"], ["fun", false], ["hits", 0], ["token", nil], ["turn", false], ["updated_at", Thu, 05 Apr 2012 00:14:50 UTC +00:00], ["url", "https://www.google.com/webhp?sourceid=chrome-instant&ix=sea&ie=UTF-8&ion=1#hl=en&output=search&sclient=psy-ab&q=check%20if%20browser%20has%20javascript%20enabled&oq=&aq=&aqi=&aql=&gs_l=&pbx=1&fp=9b0c83a130f3bca0&ix=sea&ion=1&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.,cf.osb&biw=1920&bih=1095"]]
+  [1m[36m (213.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mUPDATE "us" SET "token" = 'me', "updated_at" = '2012-04-05 00:14:50.325325' WHERE "us"."id" = 31[0m
+  [1m[35m (196.0ms)[0m  commit transaction
+Redirected to http://192.168.1.110:3000/us/new
+Completed 302 Found in 425ms (ActiveRecord: 411.5ms)
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:14:50 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 30ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:14:50 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/us" for 192.168.1.6 at 2012-04-04 20:14:51 -0400
+Processing by UsController#index as HTML
+  [1m[36mU Load (1.8ms)[0m  [1mSELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100[0m
+  Rendered us/index.html.erb within layouts/application (147.4ms)
+Completed 200 OK in 179ms (Views: 170.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/us/me" for 192.168.1.6 at 2012-04-04 20:14:56 -0400
+Processing by UsController#show as HTML
+  Parameters: {"id"=>"me"}
+  [1m[35mU Load (0.8ms)[0m  SELECT "us".* FROM "us" WHERE "us"."token" = 'me'
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  UPDATE "us" SET "hits" = 1, "updated_at" = '2012-04-05 00:14:57.027613' WHERE "us"."id" = 31
+  [1m[36m (196.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://www.google.com/webhp?sourceid=chrome-instant&ix=sea&ie=UTF-8&ion=1#hl=en&output=search&sclient=psy-ab&q=check%20if%20browser%20has%20javascript%20enabled&oq=&aq=&aqi=&aql=&gs_l=&pbx=1&fp=9b0c83a130f3bca0&ix=sea&ion=1&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.,cf.osb&biw=1920&bih=1095
+Completed 302 Found in 269ms (ActiveRecord: 198.1ms)
+
+
+Started GET "/" for 192.168.1.6 at 2012-04-04 20:15:03 -0400
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:15:03 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:15:03 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started POST "/us" for 192.168.1.6 at 2012-04-04 20:15:10 -0400
+Processing by UsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ker2OJ0aFjuCsXbW9P3kwLzUzDVdssbCgaHmylYWM1Q=", "u"=>{"url"=>"http://pacescience.org/about-the-authors/", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+  [1m[35m (0.2ms)[0m  begin transaction
+Binary data inserted for `string` type on column `creator`
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "us" ("alt_url", "created_at", "creator", "fun", "hits", "token", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["alt_url", ""], ["created_at", Thu, 05 Apr 2012 00:15:10 UTC +00:00], ["creator", "192.168.1.6"], ["fun", false], ["hits", 0], ["token", nil], ["turn", false], ["updated_at", Thu, 05 Apr 2012 00:15:10 UTC +00:00], ["url", "http://pacescience.org/about-the-authors/"]]
+  [1m[35m (194.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  UPDATE "us" SET "token" = 'mi', "updated_at" = '2012-04-05 00:15:10.502974' WHERE "us"."id" = 32
+  [1m[36m (217.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://192.168.1.110:3000/us/new
+Completed 302 Found in 429ms (ActiveRecord: 415.4ms)
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:15:10 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:15:10 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started POST "/us" for 192.168.1.6 at 2012-04-04 20:15:15 -0400
+Processing by UsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ker2OJ0aFjuCsXbW9P3kwLzUzDVdssbCgaHmylYWM1Q=", "u"=>{"url"=>"WWW.FACEBOOK.COM", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+  [1m[35m (0.2ms)[0m  begin transaction
+Binary data inserted for `string` type on column `creator`
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "us" ("alt_url", "created_at", "creator", "fun", "hits", "token", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["alt_url", ""], ["created_at", Thu, 05 Apr 2012 00:15:15 UTC +00:00], ["creator", "192.168.1.6"], ["fun", false], ["hits", 0], ["token", nil], ["turn", false], ["updated_at", Thu, 05 Apr 2012 00:15:15 UTC +00:00], ["url", "http://WWW.FACEBOOK.COM"]]
+  [1m[35m (251.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  UPDATE "us" SET "token" = 'mo', "updated_at" = '2012-04-05 00:15:16.007087' WHERE "us"."id" = 33
+  [1m[36m (184.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://192.168.1.110:3000/us/new
+Completed 302 Found in 453ms (ActiveRecord: 438.8ms)
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:15:16 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (88.3ms)
+Completed 200 OK in 114ms (Views: 113.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:15:16 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/us" for 192.168.1.6 at 2012-04-04 20:15:17 -0400
+Processing by UsController#index as HTML
+  [1m[35mU Load (2.0ms)[0m  SELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100
+  Rendered us/index.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 96ms (Views: 86.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 192.168.1.6 at 2012-04-04 20:15:32 -0400
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:15:32 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:15:32 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started POST "/us" for 192.168.1.6 at 2012-04-04 20:15:35 -0400
+Processing by UsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ker2OJ0aFjuCsXbW9P3kwLzUzDVdssbCgaHmylYWM1Q=", "u"=>{"url"=>"", "fun"=>"0", "alt_url"=>""}, "commit"=>"Shorten my URL"}
+Redirected to http://192.168.1.110:3000/us/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:15:35 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:15:35 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started POST "/us" for 192.168.1.6 at 2012-04-04 20:16:01 -0400
+Processing by UsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ker2OJ0aFjuCsXbW9P3kwLzUzDVdssbCgaHmylYWM1Q=", "u"=>{"url"=>"http://news.google.com/nwshp?hl=en&tab=wn", "fun"=>"1", "alt_url"=>"WWW.GOOGLE.COM"}, "commit"=>"Shorten my URL"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `creator`
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "us" ("alt_url", "created_at", "creator", "fun", "hits", "token", "turn", "updated_at", "url") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["alt_url", "http://WWW.GOOGLE.COM"], ["created_at", Thu, 05 Apr 2012 00:16:01 UTC +00:00], ["creator", "192.168.1.6"], ["fun", true], ["hits", 0], ["token", nil], ["turn", false], ["updated_at", Thu, 05 Apr 2012 00:16:01 UTC +00:00], ["url", "http://news.google.com/nwshp?hl=en&tab=wn"]]
+  [1m[36m (255.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mUPDATE "us" SET "token" = 'mu', "updated_at" = '2012-04-05 00:16:01.351548' WHERE "us"."id" = 34[0m
+  [1m[35m (219.6ms)[0m  commit transaction
+Redirected to http://192.168.1.110:3000/us/new
+Completed 302 Found in 494ms (ActiveRecord: 477.6ms)
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:16:01 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:16:01 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/us/mu" for 192.168.1.6 at 2012-04-04 20:16:03 -0400
+Processing by UsController#show as HTML
+  Parameters: {"id"=>"mu"}
+  [1m[36mU Load (0.8ms)[0m  [1mSELECT "us".* FROM "us" WHERE "us"."token" = 'mu'[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mUPDATE "us" SET "hits" = 1, "turn" = 't', "updated_at" = '2012-04-05 00:16:03.234741' WHERE "us"."id" = 34[0m
+  [1m[35m (227.1ms)[0m  commit transaction
+Redirected to http://WWW.GOOGLE.COM
+Completed 302 Found in 236ms (ActiveRecord: 228.7ms)
+
+
+Started GET "/us" for 192.168.1.6 at 2012-04-04 20:16:05 -0400
+Processing by UsController#index as HTML
+  [1m[36mU Load (2.0ms)[0m  [1mSELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100[0m
+  Rendered us/index.html.erb within layouts/application (152.9ms)
+Completed 200 OK in 185ms (Views: 175.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 192.168.1.6 at 2012-04-04 20:16:13 -0400
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:16:13 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:16:13 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/" for 192.168.1.6 at 2012-04-04 20:16:19 -0400
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:16:19 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/us" for 192.168.1.6 at 2012-04-04 20:16:20 -0400
+Processing by UsController#index as HTML
+  [1m[35mU Load (2.0ms)[0m  SELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100
+  Rendered us/index.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 184ms (Views: 174.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:16:21 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
