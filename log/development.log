@@ -16824,3 +16824,106 @@ Completed 200 OK in 184ms (Views: 174.4ms | ActiveRecord: 2.0ms)
 
 Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:16:21 -0400
 Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/" for 192.168.1.6 at 2012-04-04 20:17:47 -0400
+
+
+Started GET "/" for 192.168.1.6 at 2012-04-04 20:55:46 -0400
+
+
+Started GET "/us/new" for 192.168.1.6 at 2012-04-04 20:55:48 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 225ms (Views: 183.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.6 at 2012-04-04 20:55:48 -0400
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/us.css?body=1" for 192.168.1.6 at 2012-04-04 20:55:48 -0400
+Served asset /us.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.6 at 2012-04-04 20:55:48 -0400
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.1.6 at 2012-04-04 20:55:48 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/us.js?body=1" for 192.168.1.6 at 2012-04-04 20:55:48 -0400
+Served asset /us.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 192.168.1.6 at 2012-04-04 20:55:48 -0400
+Served asset /application.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/trll_logo.png" for 192.168.1.6 at 2012-04-04 20:55:48 -0400
+Served asset /trll_logo.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/favicon.ico" for 192.168.1.6 at 2012-04-04 20:55:49 -0400
+Served asset /favicon.ico - 200 OK (4ms)
+
+
+Started GET "/us" for 192.168.1.6 at 2012-04-04 20:55:51 -0400
+Processing by UsController#index as HTML
+  [1m[36mU Load (2.2ms)[0m  [1mSELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100[0m
+  Rendered us/index.html.erb within layouts/application (101.2ms)
+Completed 500 Internal Server Error in 121ms
+
+ActionView::Template::Error (undefined method `reverse_merge!' for 50:Fixnum):
+    2: <ul>
+    3: <% n_chars = 50 %>
+    4: <% @latest_urls.each do |u| %>
+    5:   <li><small><code><a href="<%= root_url + "us/" + u.token -%>" target="_blank"><%= root_url + "us/" + u.token -%></a></code> --points-to <code><a href="<%= u.url -%>" target="_blank"><%= truncate(u.url, n_chars) -%></a></code> 
+    6:     <% if u.fun %>
+    7:       --alternates-to <code><a href="<%= u.alt_url -%>" target="_blank"><%= truncate(u.alt_url,n_chars) -%></a></code>  
+    8:     <% end %>
+  app/views/us/index.html.erb:5:in `block in _app_views_us_index_html_erb__848896697_86434920'
+  app/views/us/index.html.erb:4:in `each'
+  app/views/us/index.html.erb:4:in `_app_views_us_index_html_erb__848896697_86434920'
+
+
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (19.3ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+  Rendered /home/aziz/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (53.6ms)
+
+
+Started GET "/us" for 192.168.1.6 at 2012-04-04 20:59:09 -0400
+Processing by UsController#index as HTML
+  [1m[35mU Load (2.0ms)[0m  SELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100
+  Rendered us/index.html.erb within layouts/application (213.2ms)
+Completed 200 OK in 247ms (Views: 237.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 192.168.1.6 at 2012-04-04 20:59:09 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/us.css?body=1" for 192.168.1.6 at 2012-04-04 20:59:09 -0400
+Served asset /us.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 192.168.1.6 at 2012-04-04 20:59:09 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 192.168.1.6 at 2012-04-04 20:59:09 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/us.js?body=1" for 192.168.1.6 at 2012-04-04 20:59:09 -0400
+Served asset /us.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 192.168.1.6 at 2012-04-04 20:59:09 -0400
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/trll_logo.png" for 192.168.1.6 at 2012-04-04 20:59:10 -0400
+Served asset /trll_logo.png - 304 Not Modified (1ms)
