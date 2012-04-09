@@ -51,8 +51,8 @@ END OF FB AND G+ SCRIPTS, STILL NONE OF YOUR BUSINESS -->
 <% elsif flash[:short_id].present? %>
   <p class='short-link'>
     The shortened url is available <%= link_to 'here',
-u_url(flash[:short_id]) %>.
-    (Right click and copy link to share it). or here: <pre><%= u_url(flash[:short_id]) %></pre>
+root_url + flash[:short_id] %>.
+    (Right click and copy link to share it). or here: <pre><%= root_url + flash[:short_id] %></pre>
   </p>
 <% end %>
 
