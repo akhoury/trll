@@ -29,7 +29,7 @@ class UsController < ApplicationController
   def show
     @short_url = U.find_by_token(params[:id])
     unless @short_url
-      return redirect_to new_u_url, :notice => "URL not found, loser."
+      return redirect_to new_u_url, :notice => "URL not found, BA DUM TSS!"
     end
     
     @short_url.hits = 0 if !@short_url.hits
