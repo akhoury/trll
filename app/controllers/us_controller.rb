@@ -50,6 +50,7 @@ class UsController < ApplicationController
   end
     
   def all
+    flash[:notice] = nil
     @latest_urls = U.last(100).reverse
   end
 
