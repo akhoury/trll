@@ -15677,3 +15677,228 @@ Served asset /favicon.ico - 304 Not Modified (0ms)
 
 Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:47:12 -0400
 Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/us" for 127.0.0.1 at 2012-04-04 13:50:21 -0400
+Processing by UsController#index as HTML
+  [1m[36mU Load (0.4ms)[0m  [1mSELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100[0m
+  Rendered us/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 74ms (Views: 62.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 13:50:21 -0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/us.css?body=1" for 127.0.0.1 at 2012-04-04 13:50:21 -0400
+Served asset /us.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:21 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:21 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/us.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:21 -0400
+Served asset /us.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:21 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/trll_logo.png" for 127.0.0.1 at 2012-04-04 13:50:21 -0400
+Served asset /trll_logo.png - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-04-04 13:50:23 -0400
+
+
+Started GET "/us/new" for 127.0.0.1 at 2012-04-04 13:50:23 -0400
+Processing by UsController#new as HTML
+  Rendered us/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 13:50:23 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/us.css?body=1" for 127.0.0.1 at 2012-04-04 13:50:23 -0400
+Served asset /us.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:23 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:23 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/us.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:23 -0400
+Served asset /us.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:23 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/trll_logo.png" for 127.0.0.1 at 2012-04-04 13:50:23 -0400
+Served asset /trll_logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/us" for 127.0.0.1 at 2012-04-04 13:50:25 -0400
+Processing by UsController#index as HTML
+  [1m[35mU Load (0.4ms)[0m  SELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100
+  Rendered us/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 13:50:25 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/us.css?body=1" for 127.0.0.1 at 2012-04-04 13:50:25 -0400
+Served asset /us.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:25 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:25 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/us.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:25 -0400
+Served asset /us.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:25 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/trll_logo.png" for 127.0.0.1 at 2012-04-04 13:50:25 -0400
+Served asset /trll_logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/us" for 127.0.0.1 at 2012-04-04 13:50:36 -0400
+Processing by UsController#index as HTML
+  [1m[36mU Load (0.3ms)[0m  [1mSELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100[0m
+  Rendered us/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 13:50:36 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/us.css?body=1" for 127.0.0.1 at 2012-04-04 13:50:36 -0400
+Served asset /us.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:36 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:36 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/us.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:36 -0400
+Served asset /us.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:36 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/trll_logo.png" for 127.0.0.1 at 2012-04-04 13:50:36 -0400
+Served asset /trll_logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:37 -0400
+Served asset /favicon.ico - 304 Not Modified (1ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:37 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:37 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:37 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:37 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:37 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/us" for 127.0.0.1 at 2012-04-04 13:50:43 -0400
+Processing by UsController#index as HTML
+  [1m[35mU Load (0.3ms)[0m  SELECT "us".* FROM "us" ORDER BY id DESC LIMIT 100
+  Rendered us/index.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-04-04 13:50:43 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/us.css?body=1" for 127.0.0.1 at 2012-04-04 13:50:43 -0400
+Served asset /us.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:43 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:43 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/us.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:43 -0400
+Served asset /us.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-04-04 13:50:43 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/trll_logo.png" for 127.0.0.1 at 2012-04-04 13:50:43 -0400
+Served asset /trll_logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:44 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:44 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:44 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:44 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:44 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-04-04 13:50:44 -0400
+Served asset /favicon.ico - 304 Not Modified (0ms)
