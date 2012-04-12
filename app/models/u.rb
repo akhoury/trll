@@ -10,11 +10,17 @@ class U < ActiveRecord::Base
   end
   
   def url_valid?
+    if !valid_url?(self.url)
+      self.url = prepend_http(self.url)
+    end
     return valid_url?(self.url)
   end
   
   def alt_url_valid?
     return true if !self.fun
+    if !valid_url?(self.alt_url)
+	self.alt_url = prepend_http(self.alt_url)
+    end
     return valid_url?(self.alt_url)
   end
 
@@ -25,6 +31,10 @@ class U < ActiveRecord::Base
     else
       return false
     end
+  end
+
+  def prepend_http (u)
+    return "http://"+u
   end
 
 end

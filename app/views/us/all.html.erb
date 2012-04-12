@@ -1,0 +1,12 @@
+<h2>Latest Urls created</h2>
+<ul>
+<% n_chars = 50 %>
+<% @latest_urls.each do |u| %>
+  <li><small><code><a href="<%= root_url + u.token -%>" target="_blank"><%= root_url + u.token -%></a></code> --points-to <code><a href="<%= u.url -%>" target="_blank"><%= truncate(u.url, :length => n_chars) -%></a></code> 
+    <% if u.fun %>
+      --alternates-to <code><a href="<%= u.alt_url -%>" target="_blank"><%= truncate(u.alt_url, :length => n_chars) -%></a></code>  
+    <% end %>
+    --hits <span class="number"><%= u.hits.to_s -%></span> --creator-ip <span class="number"><%= u.creator %></span> --created-at <span class="number"> <%= u.created_at.to_s %></span>
+  </small></li>
+<% end %>
+</ul>

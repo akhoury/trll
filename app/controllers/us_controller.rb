@@ -17,15 +17,22 @@ class UsController < ApplicationController
       redirect_to new_u_url
     elsif @short_url.save
       flash[:short_id] = Rufus::Mnemo::from_integer(@short_url.id)
+      
+      @short_url.token = flash[:short_id]
+	    @short_url.save!  
       redirect_to new_u_url
-      @short_url.update_attribute(:token, Rufus::Mnemo::from_integer(@short_url.id))  
     else
       render :action => "new"
     end
   end
   
   def show
-    @short_url = U.where(:token => params[:id])[0]
+    @short_url = U.find_by_token(params[:id])
+    unless @short_url
+      return redirect_to new_u_url, :notice => "URL not found, BA DUM TSS!"
+    end
+    
+    @short_url.hits = 0 if !@short_url.hits
     @short_url.hits = @short_url.hits + 1  
     if !@short_url.fun
       @short_url.save!
@@ -42,7 +49,8 @@ class UsController < ApplicationController
     end
   end
     
-  def index
+  def all
+    flash[:notice] = nil
     @latest_urls = U.last(100).reverse
   end
 
