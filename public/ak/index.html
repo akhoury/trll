@@ -2,8 +2,55 @@
 <head>
 <title>oh hai</title>
 <link rel="stylesheet" type="text/css" href="/ak/style.css" />
+<script type="text/javascript" src="assets/jquery.js"></script>
+<script type="text/javascript">
+var doorbg = "E6E6E6", doorfg ="CCCCCC";
+	$(document).ready(function(){
+		var canvas = $('#canvas')[0];
+		if(canvas.getContext){		
+			var ctx = canvas.getContext('2d');
+			// canvas resize to all window
+			ctx.canvas.width  = window.innerWidth;
+			ctx.canvas.height = window.innerHeight;
+			
+			bedroomDoor(ctx);
+			$('body').css({'background-image':"url(" + Canvas.toDataURL("image/png")+ ")" });			
+		}
+		else{
+			alert("no html5? lame, get a real browser dude!");
+		}
+	});
+	function bedroomDoor(c){
+		c.fillStyle = doorfg;
+		c.fillRect(200,200,300,600);
+		c.fillStyle = doorbg;
+		c.fillRect(205,205,295,595);
+		c.strokeStyle = "black";
+		c.strokeRect(190,190,320,610);
+		c.strokeRect(200,200,300,610);
+		//handle
+		c.beginPath();
+		c.arc(475,500, 10, 0, Math.PI*2, true);
+		c.arc(475,500, 14, 0, Math.PI*2, true);
+		c.closePath();
+		c.stroke();
+		c.fillStyle = "white";
+		c.font = '30px impact';
+		c.fillText("MY ROOM, MY MESS", 235, 700);
+	}
+	
+	function drawTop(c){
+		var imageT = new Image();
+		imageT.src = "assets/top.png";
+		imageT.onload = function(){
+			c.fillStyle = c.createPattern(imageT, "repeat-x");
+			c.fillRect(0, 0, c.canvas.width, 160);
+		}
+	}	
+</script>
 </head>
 <body>
-<h2>look ma! I haz a website !</h2>
+<canvas id="canvas"></canvas>
+<h1 style="color:red;">I are the niggest</h1>
 </body>
 </html>
