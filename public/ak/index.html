@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="/ak/style.css" />
 <script type="text/javascript" src="assets/jquery.js"></script>
 <script type="text/javascript">
-var doorbg = "E6E6E6", doorfg ="CCCCCC";
+var doorbg = "E6E6E6", doorfg ="CCCCCC", clear = "rgba(1,159,98,0)";
 	$(document).ready(function(){
 		var canvas = $('#canvas')[0];
 		if(canvas.getContext){		
@@ -14,43 +14,92 @@ var doorbg = "E6E6E6", doorfg ="CCCCCC";
 			ctx.canvas.height = window.innerHeight;
 			
 			bedroomDoor(ctx);
-			$('body').css({'background-image':"url(" + Canvas.toDataURL("image/png")+ ")" });			
+			drawTop(ctx);		
+			drawBottom(ctx)
+			addWallImages(ctx);
+			addDoorImages(ctx);
+			bed(ctx);
+			draw(ctx);
 		}
 		else{
 			alert("no html5? lame, get a real browser dude!");
 		}
 	});
-	function bedroomDoor(c){
-		c.fillStyle = doorfg;
-		c.fillRect(200,200,300,600);
-		c.fillStyle = doorbg;
-		c.fillRect(205,205,295,595);
-		c.strokeStyle = "black";
-		c.strokeRect(190,190,320,610);
-		c.strokeRect(200,200,300,610);
-		//handle
-		c.beginPath();
-		c.arc(475,500, 10, 0, Math.PI*2, true);
-		c.arc(475,500, 14, 0, Math.PI*2, true);
-		c.closePath();
-		c.stroke();
-		c.fillStyle = "white";
-		c.font = '30px impact';
-		c.fillText("MY ROOM, MY MESS", 235, 700);
-	}
+  function bedroomDoor(ctx){
+  	ctx.fillStyle = doorfg;
+  	ctx.fillRect(200,200,300,600);
+  	ctx.fillStyle = doorbg;
+  	ctx.fillRect(205,205,295,595);
+  	ctx.strokeStyle = "black";
+  	ctx.strokeRect(190,190,320,610);
+  	ctx.strokeRect(200,200,300,610);
+  	//handle
+  	ctx.beginPath();
+  	ctx.arc(475,500, 10, 0, Math.PI*2, true);
+  	ctx.arc(475,500, 14, 0, Math.PI*2, true);
+  	ctx.closePath();
+  	ctx.stroke();
+  	//handle gradient
+  	
+  	ctx.fillStyle = "white";
+  	ctx.font = '30px impact';
+  	ctx.fillText("MY ROOM, MY MESS", 235, 700);
+  }
 	
-	function drawTop(c){
-		var imageT = new Image();
-		imageT.src = "assets/top.png";
-		imageT.onload = function(){
-			c.fillStyle = c.createPattern(imageT, "repeat-x");
-			c.fillRect(0, 0, c.canvas.width, 160);
-		}
-	}	
+  function drawTop(ctx){
+    var grd = ctx.createLinearGradient(0,160,0,0); 
+    grd.addColorStop(0, '#CCCCCC');
+    grd.addColorStop(0.7, 'white'); 
+    ctx.fillStyle=grd;
+    ctx.fillRect(0,0,ctx.canvas.width,160);
+  }	
+  function drawBottom(ctx){
+    var grd = ctx.createLinearGradient(0,800,0,600); 
+    grd.addColorStop(0, '#CCCCCC');
+    grd.addColorStop(0.3, 'white'); 
+    ctx.fillStyle=grd;
+    ctx.fillRect(0,800,ctx.canvas.width,200);
+  }
+  function addWallImages(ctx){
+    var img = new Image();  
+    img.src = '/ak/img/pencil.png';
+    img.onload = function(){
+      ctx.drawImage(img, 600, 220, img.width*0.75, img.height*0.75);
+    }
+  }
+  function addDoorImages(ctx){
+    nosmoking(ctx);
+    nospam(ctx);
+    notanexit(ctx)
+  }
+  function nosmoking(ctx){
+    var img = new Image();  
+    img.src = '/ak/img/nosmoking.png';
+    img.onload = function(){
+      ctx.drawImage(img, 220, 220);
+    }
+  }  
+  function nospam(ctx){
+    var img = new Image();  
+    img.src = '/ak/img/nospam.png';
+    img.onload = function(){
+      ctx.drawImage(img, 310, 220);
+    }
+  }
+  function notanexit(ctx){
+    ctx.fillStyle = "#9B111E";
+  	ctx.font = '23px impact';
+  	ctx.fillText("NOT AN", 420, 255);
+  	ctx.fillText("EXIT", 428, 278);
+  	ctx.strokeStyle = "#9B111E";
+  	ctx.lineWidth = 3;  
+  	ctx.strokeRect(415,230,75,60);	
+  }
+  function bed(ctx){    
+  }
 </script>
 </head>
 <body>
 <canvas id="canvas"></canvas>
-<h1 style="color:red;">I are the niggest</h1>
 </body>
 </html>
