@@ -16,10 +16,11 @@ var doorbg = "E6E6E6", doorfg ="CCCCCC", clear = "rgba(1,159,98,0)";
 			bedroomDoor(ctx);
 			drawTop(ctx);		
 			drawBottom(ctx)
-			addWallImages(ctx);
-			addDoorImages(ctx);
+			wallImages(ctx);
+			doorImages(ctx);
+			trashcan(ctx);
 			bed(ctx);
-			draw(ctx);
+			cube(ctx);
 		}
 		else{
 			alert("no html5? lame, get a real browser dude!");
@@ -42,7 +43,7 @@ var doorbg = "E6E6E6", doorfg ="CCCCCC", clear = "rgba(1,159,98,0)";
   	//handle gradient
   	
   	ctx.fillStyle = "white";
-  	ctx.font = '30px impact';
+  	ctx.font = '25px impact';
   	ctx.fillText("MY ROOM, MY MESS", 235, 700);
   }
 	
@@ -60,17 +61,17 @@ var doorbg = "E6E6E6", doorfg ="CCCCCC", clear = "rgba(1,159,98,0)";
     ctx.fillStyle=grd;
     ctx.fillRect(0,800,ctx.canvas.width,200);
   }
-  function addWallImages(ctx){
+  function wallImages(ctx){
     var img = new Image();  
     img.src = '/ak/img/pencil.png';
     img.onload = function(){
       ctx.drawImage(img, 600, 220, img.width*0.75, img.height*0.75);
     }
   }
-  function addDoorImages(ctx){
+  function doorImages(ctx){
     nosmoking(ctx);
     nospam(ctx);
-    notanexit(ctx)
+    exit(ctx)
   }
   function nosmoking(ctx){
     var img = new Image();  
@@ -86,16 +87,33 @@ var doorbg = "E6E6E6", doorfg ="CCCCCC", clear = "rgba(1,159,98,0)";
       ctx.drawImage(img, 310, 220);
     }
   }
-  function notanexit(ctx){
-    ctx.fillStyle = "#9B111E";
-  	ctx.font = '23px impact';
-  	ctx.fillText("NOT AN", 420, 255);
-  	ctx.fillText("EXIT", 428, 278);
-  	ctx.strokeStyle = "#9B111E";
-  	ctx.lineWidth = 3;  
-  	ctx.strokeRect(415,230,75,60);	
+  function exit(ctx){
+    var img = new Image();  
+    img.src = '/ak/img/exit.png';
+    img.onload = function(){
+      ctx.drawImage(img, 410, 245);
+    }
   }
-  function bed(ctx){    
+  function bed(ctx){ 
+	var img = new Image();  
+    img.src = '/ak/img/bed.png';
+    img.onload = function(){
+      ctx.drawImage(img, 750, 700, img.width*1.5, img.height*1.5);
+    }  
+  }
+  function trashcan(ctx){
+	 var img = new Image();  
+    img.src = '/ak/img/trashcan.png';
+    img.onload = function(){
+      ctx.drawImage(img, 10, 675, img.width*0.75, img.height*0.75);
+    }
+  }
+    function cube(ctx){
+	 var img = new Image();  
+    img.src = '/ak/img/cube.png';
+    img.onload = function(){
+      ctx.drawImage(img, 515, 760, img.width*0.45, img.height*0.45);
+    }
   }
 </script>
 </head>
