@@ -3,121 +3,25 @@
 <title>oh hai</title>
 <link rel="stylesheet" type="text/css" href="/ak/style.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-var doorbg = "E6E6E6", doorfg ="CCCCCC", clear = "rgba(1,159,98,0)";
-	var cubeImg = new Image();
-	$(document).ready(function(){
-		var canvas = $('#canvas')[0];
-		if(canvas.getContext){		
-			var ctx = canvas.getContext('2d');
-			// canvas resize to all window
-			ctx.canvas.width  = window.innerWidth;
-			ctx.canvas.height = window.innerHeight;
-			
-			bedroomDoor(ctx);
-			drawTop(ctx);		
-			drawBottom(ctx)
-			wallImages(ctx);
-			doorImages(ctx);
-			trashcan(ctx);
-			bed(ctx);
-			cube(ctx);
-		}
-		else{
-			alert("no html5? lame, get a real browser dude!");
-		}
-	});
-  function bedroomDoor(ctx){
-  	ctx.fillStyle = doorfg;
-  	ctx.fillRect(200,200,300,600);
-  	ctx.fillStyle = doorbg;
-  	ctx.fillRect(205,205,295,595);
-  	ctx.strokeStyle = "black";
-  	ctx.strokeRect(190,190,320,610);
-  	ctx.strokeRect(200,200,300,610);
-  	//handle
-  	ctx.beginPath();
-  	ctx.arc(475,500, 10, 0, Math.PI*2, true);
-  	ctx.arc(475,500, 14, 0, Math.PI*2, true);
-  	ctx.closePath();
-  	ctx.stroke();
-  	//handle gradient
-  	
-  	ctx.fillStyle = "white";
-  	ctx.font = '25px impact';
-  	ctx.fillText("MY ROOM, MY MESS", 235, 700);
-  }
-	
-  function drawTop(ctx){
-    var grd = ctx.createLinearGradient(0,160,0,0); 
-    grd.addColorStop(0, '#CCCCCC');
-    grd.addColorStop(0.7, 'white'); 
-    ctx.fillStyle=grd;
-    ctx.fillRect(0,0,ctx.canvas.width,160);
-  }	
-  function drawBottom(ctx){
-    var grd = ctx.createLinearGradient(0,800,0,600); 
-    grd.addColorStop(0, '#CCCCCC');
-    grd.addColorStop(0.3, 'white'); 
-    ctx.fillStyle=grd;
-    ctx.fillRect(0,800,ctx.canvas.width,200);
-  }
-  function wallImages(ctx){
-    var img = new Image();  
-    img.src = '/ak/img/pencil.png';
-    img.onload = function(){
-      ctx.drawImage(img, 600, 220, img.width*0.75, img.height*0.75);
-    }
-  }
-  function doorImages(ctx){
-    nosmoking(ctx);
-    nospam(ctx);
-    exit(ctx)
-  }
-  function nosmoking(ctx){
-    var img = new Image();  
-    img.src = '/ak/img/nosmoking.png';
-    img.onload = function(){
-      ctx.drawImage(img, 220, 220);
-    }
-  }  
-  function nospam(ctx){
-    var img = new Image();  
-    img.src = '/ak/img/nospam.png';
-    img.onload = function(){
-      ctx.drawImage(img, 310, 220);
-    }
-  }
-  function exit(ctx){
-    var img = new Image();  
-    img.src = '/ak/img/exit.png';
-    img.onload = function(){
-      ctx.drawImage(img, 410, 245);
-    }
-  }
-  function bed(ctx){ 
-	var img = new Image();  
-    img.src = '/ak/img/bed.png';
-    img.onload = function(){
-      ctx.drawImage(img, 750, 700, img.width*1.5, img.height*1.5);
-    }  
-  }
-  function trashcan(ctx){
-	 var img = new Image();  
-    img.src = '/ak/img/trashcan.png';
-    img.onload = function(){
-      ctx.drawImage(img, 10, 675, img.width*0.75, img.height*0.75);
-    }
-  }
-    function cube(ctx){  
-    cubeImg.src = '/ak/img/cube.png';
-    cubeImg.onload = function(){
-      ctx.drawImage(cubeImg, 515, 760, cubeImg.width*0.45, cubeImg.height*0.45);
-    }
-  }
-</script>
 </head>
 <body>
-<canvas id="canvas"></canvas>
+	<div class="header">
+	</div>
+	<div class="content">
+		<div id="door-outline">
+			<div id="door">
+				<div id="signs">
+				<img class="signs" src="/ak/img/nosmoking.png"></img>
+				<img class="signs" src="/ak/img/nospam.png"></img>
+				<img class="signs" src="/ak/img/exit.png"></img>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="bed">
+		<img src="/ak/img/bed.png"></img>
+	</div>
+	<div class="footer">
+	</div>
 </body>
 </html>

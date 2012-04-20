@@ -1,5 +1,57 @@
-body {
-	color: white;
+
+.content, .header, .footer {
+	color: black;
 	font-family: "calibri", "verdana", "monospace";
+}
+.header {
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #CFCFCF));
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
+	background-image: linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
+	min-height: 150px;
+	height: auto;
+	width: auto;
 	}
-	
+
+.content {
+	min-height: 450px;
+	width: auto;
+	}
+#door {
+	background-color: #CCCCCC;
+	height: 600px;
+	width: 300px;
+	border-width: 4px 2px 1px 4px;
+	border-style: solid;
+	border-color: #666666;
+	}
+#door-outline {
+	background-color: transparent;
+	height: 600px;
+	width: 300px;
+	border-width: 22px 28px 0px 22px;
+	margin-left: 200px;
+	margin-top: 75px;
+	border-style: solid;
+	border-color: #F7F7F7;
+	}
+#signs{
+	align: center;			
+}
+.signs{
+	margin: 3px;
+}
+#bed{
+ position: relative;
+ top: -50px;
+ left: 750px;
+ z-index: 99;
+}
+.footer {
+	background-color: #CCCCCC;
+	min-height: 300px;
+	width: auto;
+	}
+
