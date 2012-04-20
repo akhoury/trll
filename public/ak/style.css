@@ -36,18 +36,31 @@
 	margin-top: 75px;
 	border-style: solid;
 	border-color: #F7F7F7;
+	position: absolute;
 	}
 #signs{
 	align: center;			
 }
-.signs{
+#signs .signs{
 	margin: 3px;
+}
+#pencil{
+ margin-top: 75px;
+ position: relative;
+ left: 50px;
+}
+#trash{
+ position: relative;
+ top: -150px;
+ left: 50px;
+ z-index: 97;
+ zoom:0.7;
 }
 #bed{
  position: relative;
- top: -50px;
- left: 750px;
- z-index: 99;
+ left: 300px;
+ z-index: 98;
+ zoom:1.7;
 }
 .footer {
 	background-color: #CCCCCC;
