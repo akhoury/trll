@@ -9,7 +9,8 @@ function toggleLight(){
 	var arr_rep = $(".replace");
 	if(light){
 		$(document)[0].body.style.backgroundColor = "black";
-		$(".header").css('cssText', gradientCSSText("#000000","#191919", true));
+		$(".header").css('cssText', gradientCSSText("#000000","#191919"));
+		$(".header").css("background-image", "url('../ak/img/stars.png')"); 
 		hideThose(arr);
 		$(".doors").css('cssText', "border: none; background-color: transparent;");
 		replace(arr_rep);
@@ -69,9 +70,6 @@ function gradientCSSText(c1, c2, stars){
 			+ "background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, "+ c1 +"), color-stop(1, "+ c2 +"));"
 			+ "background-image: -webkit-linear-gradient(top, "+ c1 +" 0%, "+ c2 +" 100%);"
 			+ "background-image: linear-gradient(top, "+ c1 +" 0%, "+ c2 +" 100%);";
-	if(stars){
-		str += str + "background-image: url('/ak/img/stars.png'); repeat;"
-	}
 	return str;
 }
 function doorCSS(){
