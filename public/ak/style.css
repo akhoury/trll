@@ -1,22 +1,28 @@
 
+a, img {
+	border: none;
+}
+
 .content, .header, .footer {
 	color: black;
 	font-family: "calibri", "verdana", "monospace";
 }
 .header {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#CFCFCF');
 	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
 	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
 	background-image: -o-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #CFCFCF));
 	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
 	background-image: linear-gradient(top, #FFFFFF 0%, #CFCFCF 100%);
+	height: 150px;
 	min-height: 150px;
-	height: auto;
+	_height: 150px
+	*height: 150px;
 	width: auto;
 	}
 
 .content {
-	position: relative;
 	min-height: 450px;
 	width: auto;	
 	min-width: 800px;
@@ -31,6 +37,8 @@
 	}
 #door-outline {
 	background-color: transparent;
+	*height: 600px; /*ie7*/
+    _height: 600px; /*ie6*/	
 	height: 600px;
 	width: 300px;
 	float: left;
@@ -46,57 +54,60 @@
 #signs .signs{
 	margin: 3px;
 }
+#handle {
+	float: right;
+}
 #pencil{
 	float: left;
 	margin-top: 75px;
 	margin-left: 75px;
 	clear: right;
 	}
-#trash-bed-bottom{
-	 position: relative;
-	 top: -150px;
-	 left: 50px;
+#trash{
+	 position: absolute;
+	 top: 750px;
+	 left: 10px;
 	 z-index: 97;
-	 zoom:0.7;
 }
 #cube{
-	position: relative;
-	top: -200px;
-	left: 500px;
-	zoom: 0.75;
-}
+	position: absolute;
+	top: 780px;
+	left: 210px;
+	}
 #cube a #cube-in{
-	position: relative;
 	z-index: 3;
 }
 #cube a #cube-g{
-	position: relative;
-	top: -213px;
-	left: -355px;
+	position: absolute;
+	top: -35px;
+	left: 1px;
 	z-index: 5;
 }
 #cube a #cube-git{
-	position: relative;
 	z-index: 4;
-	margin-left: -20px;
+	margin-left: -10px;
 }
+
 #resume-pdf {
-	position: relative;
-	bottom: 750px;
-	left: 1200px;
-	zoom: 0.5;
+	position: absolute;
+	top: 700px;
+	left: 380px;
 }
 #bed{
-	position: relative;
-	left: 450px;
+	position: absolute;
+	left: 600px;
 	z-index: 98;
-	top: -350px;
-	zoom: 2;
-}
+	top: 750px;
+	}
+
 .footer {
+	float: bottom;
 	margin-top: 250px;
-	background-color: #CCCCCC;
+	height: 300px;
+	*height: 300px; /*ie7*/
+    _height: 300px; /*ie6*/	
 	min-height: 300px;
+	max-height: 450px;
 	width: auto;
 	}
 
