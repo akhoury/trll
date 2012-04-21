@@ -3,7 +3,7 @@ a, img {
 	border: none;
 }
 
-.content, .header, .footer {
+.content, .header, .bottom, .footer {
 	color: black;
 	font-family: "calibri", "verdana", "monospace";
 }
@@ -57,6 +57,10 @@ a, img {
 #handle {
 	float: right;
 }
+#light-switch{
+	position: relative;
+	top: 300px;
+}
 #pencil{
 	float: left;
 	margin-top: 75px;
@@ -106,7 +110,7 @@ a, img {
 	top: 850px;
 }
 
-.footer {
+.bottom {
 	float: bottom;
 	margin-top: 250px;
 	height: 300px;
@@ -115,5 +119,10 @@ a, img {
 	min-height: 300px;
 	max-height: 450px;
 	width: auto;
-	}
+}
+.footer{
+	text-align: center;
+	position: relative;
+	top: 200px;
+}
 
