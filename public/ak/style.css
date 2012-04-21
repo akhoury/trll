@@ -16,8 +16,10 @@
 	}
 
 .content {
+	position: relative;
 	min-height: 450px;
-	width: auto;
+	width: auto;	
+	min-width: 800px;
 	}
 #door {
 	background-color: #CCCCCC;
@@ -31,12 +33,12 @@
 	background-color: transparent;
 	height: 600px;
 	width: 300px;
+	float: left;
 	border-width: 22px 28px 0px 22px;
 	margin-left: 200px;
 	margin-top: 75px;
 	border-style: solid;
 	border-color: #F7F7F7;
-	position: absolute;
 	}
 #signs{
 	align: center;			
@@ -45,24 +47,54 @@
 	margin: 3px;
 }
 #pencil{
- margin-top: 75px;
- position: relative;
- left: 50px;
+	float: left;
+	margin-top: 75px;
+	margin-left: 75px;
+	clear: right;
+	}
+#trash-bed-bottom{
+	 position: relative;
+	 top: -150px;
+	 left: 50px;
+	 z-index: 97;
+	 zoom:0.7;
 }
-#trash{
- position: relative;
- top: -150px;
- left: 50px;
- z-index: 97;
- zoom:0.7;
+#cube{
+	position: relative;
+	top: -200px;
+	left: 500px;
+	zoom: 0.75;
+}
+#cube a #cube-in{
+	position: relative;
+	z-index: 3;
+}
+#cube a #cube-g{
+	position: relative;
+	top: -213px;
+	left: -355px;
+	z-index: 5;
+}
+#cube a #cube-git{
+	position: relative;
+	z-index: 4;
+	margin-left: -20px;
+}
+#resume-pdf {
+	position: relative;
+	bottom: 750px;
+	left: 1200px;
+	zoom: 0.5;
 }
 #bed{
- position: relative;
- left: 300px;
- z-index: 98;
- zoom:1.7;
+	position: relative;
+	left: 450px;
+	z-index: 98;
+	top: -350px;
+	zoom: 2;
 }
 .footer {
+	margin-top: 250px;
 	background-color: #CCCCCC;
 	min-height: 300px;
 	width: auto;
