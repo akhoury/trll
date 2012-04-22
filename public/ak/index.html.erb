@@ -9,6 +9,7 @@ Thank you for taking a look at the source, it's super complicated, I should warn
 <link rel="shortcut icon" href="/ak/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/ak/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="/ak/style.css" />
+<%= analytics_init if Rails.env.production? %>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 //unminified javascript for your convenience.
