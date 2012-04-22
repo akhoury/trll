@@ -154,5 +154,7 @@ a, img {
 	top: 48px;
 }
 #night-stuff{
+	position: relative;
+	top: 7px;
 }
 
