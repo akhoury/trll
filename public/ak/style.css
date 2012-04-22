@@ -128,14 +128,35 @@ a, img {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	right: 0px;
-	bottom: 0px;
+	right: -500px;
+	bottom: -500px;
 	z-index: 998;
 	background: #000000;
 	background-image: url('/ak/img/stars.png');
 	background-repeat:repeat-x;
-	height: 100%;
-	width: 100%;
+	height: auto;
+	width: auto;
+	_height: 100%;
+	_width: 100%;
+	*height: 100%;
+	*width: 100%;
 	display: none;
+}
+#leave-night{
+	position: relative;
+	top: 112px;
+	left: 424px;
+}
+#switch-night{
+	position: relative;
+	top: -42px;
+	left: 559px;
+}
+#eyes-night{
+	position: relative;
+	left: 632px;
+	top: 48px;
+}
+#night-stuff{
 }
 

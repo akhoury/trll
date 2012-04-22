@@ -1,3 +1,5 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 <!--
@@ -18,16 +20,13 @@ $(document).ready(function(){
   $('.switch').on('click', function(){ 
 		toggleLight();
 	});
-	buildBlackOut();
 });
 function toggleLight(){
 	if(light){
-		console.log("lights off");
 		$('#night').css('opacity',0).show().animate({opacity:.97});
 		light = false;
 	}
 	else{
-		console.log("lights on");
 		$('#night').hide().animate({opacity:0});
 		light = true;
 	}
@@ -41,15 +40,6 @@ function soLong(){
 	if (window){
 		window.location = "http://www.google.com";
 	}
-}
-function buildBlackOut(){
-	copyPosition($('#leave-night'), $('#leave'));
-	copyPosition($('#eyes-night'), $('#pencil'));
-	copyPosition($('#switch-night'), $('#light-switch'));
-}
-//must pass jquery object
-function copyPosition(obj1, obj2){
-	obj1.offset(obj2.offset());
 }
 </script>
 </head>
@@ -120,10 +110,12 @@ function copyPosition(obj1, obj2){
 		</small>
 	</div>
 	<div id="night">
-	<div id="stars-night" style="background-image=url(/ak/img/stars.png); repeat-x; z-index: 999; min-height: 150px; height; 150px;"></div>
-	<div id="leave-night"><a href="#" class="exit"><img src="/ak/img/exit.png"></img></a></div>
-	<div id="eyes-night"><img src="/ak/img/pencil-eyes-only.png"></img></div>
-	<div id="switch-night"><a href="#" class="switch"><img src="/ak/img/light-switch.png"></img></a></div>
+		<div id="stars-night" style="background-image=url(/ak/img/stars.png); repeat-x; z-index: 999; min-height: 150px; height; 150px;"></div>
+		<div id="night-stuff">
+			<div id="leave-night"><a href="#" class="exit"><img src="/ak/img/exit.png"></img></a></div>
+			<div id="eyes-night"><img src="/ak/img/pencil-eyes-only.png"></img></div>
+			<div id="switch-night"><a href="#" class="switch"><img src="/ak/img/light-switch.png"></img></a></div>
+		</div>
 	</div>
 </body>
 </html>
