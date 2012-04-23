@@ -59,12 +59,16 @@ a, img {
 #light-switch{
 	position: relative;
 	top: 300px;
+	z-index: 90;
 }
 #pencil{
 	float: left;
 	margin-top: 75px;
 	margin-left: 75px;
-	clear: right;
+	clear: right !important;
+	}
+#radio{
+	clear: left;
 	}
 #trash{
 	 position: absolute;
@@ -142,11 +146,13 @@ a, img {
 	position: relative;
 	top: 112px;
 	left: 424px;
+	z-index: 901;
 }
 #switch-night{
 	position: relative;
 	top: -42px;
 	left: 559px;
+	z-index: 900;
 }
 #eyes-night{
 	position: relative;
@@ -157,15 +163,4 @@ a, img {
 	position: relative;
 	top: 7px;
 }
-#radio{
-	position: relative;
-	top: 375px;
-	left: -380px;
-	/*
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  	filter: alpha(opacity=50);
-  	-moz-opacity: 0.5;
-  	-khtml-opacity: 0.5;
-  	opacity: 0.5;
-	*/
-}
+
