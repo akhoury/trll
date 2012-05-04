@@ -1,11 +1,13 @@
 Trll::Application.routes.draw do
+  get "h/index"
+
   # get "us/new"
   # resources :us, :only => [:new, :show, :create, :index ]
   # root :to => redirect("/us/new")
   # get 'us/all'
   resources :us, :only => [:new, :create]
   get '/us/all' => 'us#all'
-
+	
   get '/:id' => 'us#show', :as => :u
   get '/us/:id' => 'us#show', :as => :u
 
