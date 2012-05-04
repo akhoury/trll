@@ -1,5 +1,5 @@
 Trll::Application.routes.draw do
-  get "h/index"
+  get 'h/index' => 'h#index', :as => :h
 
   # get "us/new"
   # resources :us, :only => [:new, :show, :create, :index ]
