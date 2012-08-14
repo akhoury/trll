@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120404204825) do
+ActiveRecord::Schema.define(:version => 20120814033542) do
 
   create_table "urls", :force => true do |t|
     t.string   "url",                           :null => false
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20120404204825) do
     t.integer  "hits"
     t.string   "creator"
     t.string   "token"
+    t.string   "botlove"
   end
 
   add_index "us", ["token"], :name => "index_us_on_token", :unique => true

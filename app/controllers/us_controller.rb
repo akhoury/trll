@@ -9,7 +9,12 @@ class UsController < ApplicationController
     @short_url = U.new(params[:u])
     @short_url.creator = request.remote_ip
     @short_url.hits = 0;
-    if !@short_url.url.present? || !@short_url.alt_url_present? 
+    if @short_url.botlove.present?
+      a =  [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten;  
+      b = (0..6).map{ a[rand(a.length)]  }.join;
+      flash[:short_id] = b
+      redirect_to new_u_url
+    elsif !@short_url.url.present? || !@short_url.alt_url_present? 
       flash[:notice] = "URL(s) cannot be blank, k? k."
       redirect_to new_u_url
     elsif !@short_url.url_valid? || !@short_url.alt_url_valid?  
