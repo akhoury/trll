@@ -42,50 +42,50 @@ a, img {
 	border-style: solid;
 	border-color: #E6E6E6;
 }
-#signs{
+#signs {
 	align: center;			
 }
-#signs .signs{
+#signs .signs {
 	margin: 3px;
 }
 #handle {
 	float: right;
 }
-#light-switch{
+#light-switch {
 	position: relative;
 	top: 300px;
 	z-index: 90;
 }
-#pencil{
+#pencil {
 	float: left;
 	margin-top: 75px;
 	margin-left: 75px;
 	clear: right !important;
 }
-#radio{
+#radio {
 	clear: left;
 }
-#trash{
+#trash {
 	 position: absolute;
 	 top: 750px;
 	 left: 32px;
 	 z-index: 97;
 }
-#cube{
+#cube {
 	position: absolute;
 	top: 820px;
 	left: 275px;
 	}
-#cube a #cube-in{
+#cube a #cube-in {
 	z-index: 3;
 }
-#cube a #cube-g{
+#cube a #cube-g {
 	position: absolute;
 	top: -20px;
 	left: 1px;
 	z-index: 5;
 }
-#cube a #cube-git{
+#cube a #cube-git {
 	z-index: 4;
 	margin-left: -10px;
 }
@@ -95,13 +95,13 @@ a, img {
 	top: 750px;
 	left: 400px;
 }
-#bed{
+#bed {
 	position: absolute;
 	left: 600px;
 	z-index: 98;
 	top: 750px;
 	}
-#beer{
+#beer {
 	position: absolute;
 	left: 900px;
 	z-index: 99;
@@ -117,10 +117,15 @@ a, img {
 	max-height: 450px;
 	width: auto;
 }
-.footer{
+.footer {
 	text-align: center;
 	position: relative;
 	top: 200px;
+}
+.centered {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
 }
 #night {
 	position: absolute;
@@ -136,24 +141,24 @@ a, img {
 	width: auto !important;
 	display: none;
 }
-#leave-night{
+#leave-night {
 	position: relative;
 	top: 112px;
 	left: 424px;
 	z-index: 901;
 }
-#switch-night{
+#switch-night {
 	position: relative;
 	top: -42px;
 	left: 559px;
 	z-index: 900;
 }
-#eyes-night{
+#eyes-night {
 	position: relative;
 	left: 632px;
 	top: 48px;
 }
-#night-stuff{
+#night-stuff {
 	position: relative;
 	top: 7px;
 }
