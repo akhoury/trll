@@ -43,7 +43,7 @@ a, img {
 	border-color: #E6E6E6;
 }
 #signs {
-	align: center;			
+	text-align: center;
 }
 #signs .signs {
 	margin: 3px;
@@ -67,14 +67,14 @@ a, img {
 }
 #trash {
 	 position: absolute;
-	 top: 750px;
+	 top: 225px;
 	 left: 32px;
 	 z-index: 97;
 }
 #cube {
 	position: absolute;
 	top: 820px;
-	left: 275px;
+	left: 215px;
 	}
 #cube a #cube-in {
 	z-index: 3;
@@ -93,23 +93,22 @@ a, img {
 #resume-pdf {
 	position: absolute;
 	top: 750px;
-	left: 400px;
+	left: 130px;
 }
 #bed {
 	position: absolute;
 	left: 600px;
 	z-index: 98;
-	top: 750px;
+	top: 150px;
 	}
 #beer {
 	position: absolute;
 	left: 900px;
 	z-index: 99;
-	top: 850px;
+	top: 250px;
 }
 
 .bottom {
-	float: bottom;
 	height: 300px;
 	width: 985px;
 }
@@ -125,8 +124,8 @@ a, img {
 }
 #night {
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 	right: -500px;
 	bottom: -500px;
 	z-index: 998;
