@@ -21,8 +21,9 @@ $(document).ready(function(){
   $('.switch').on('click', toggleLight);
 });
 
-function toggleLight(){
-	if(light){
+function toggleLight(e){
+    e.preventDefault();
+    if(light){
 		$('#night').css('opacity',0).show().animate({opacity:.98});
 		light = false;
 	}
@@ -32,7 +33,8 @@ function toggleLight(){
 	}
 }
 
-function soLong(){
+function soLong(e){
+    e.preventDefault();
 	setTimeout(function(){
 		window.open('', '_self', '');
 		window.close();
