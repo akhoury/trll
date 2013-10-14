@@ -66,16 +66,16 @@ a, img {
 	clear: left;
 }
 #trash {
-	 position: absolute;
-	 top: 225px;
-	 left: 32px;
-	 z-index: 97;
+    position: absolute;
+    top: 140px;
+    left: 32px;
+    z-index: 97;
 }
 #cube {
-	position: absolute;
-	top: 820px;
-	left: 215px;
-	}
+    position: absolute;
+    top: 215px;
+    left: 270px;
+}
 #cube a #cube-in {
 	z-index: 3;
 }
@@ -91,9 +91,9 @@ a, img {
 }
 
 #resume-pdf {
-	position: absolute;
-	top: 750px;
-	left: 130px;
+    position: absolute;
+    top: 120px;
+    left: 400px;
 }
 #bed {
 	position: absolute;
