@@ -109,6 +109,7 @@ a, img {
 }
 
 .bottom {
+    position: relative;
 	height: 300px;
 	width: 985px;
 }
