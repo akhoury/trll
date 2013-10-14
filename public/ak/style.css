@@ -130,7 +130,7 @@ a, img {
 	bottom: -500px;
 	z-index: 998;
 	background: #000000;
-	background-image: url('/ak/img/stars.png');
+	background-image: url('img/stars.png');
 	background-repeat:repeat-x;
 	height: auto !important;
 	width: auto !important;
